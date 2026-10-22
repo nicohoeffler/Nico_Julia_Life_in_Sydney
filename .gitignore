@@ -1,0 +1,9 @@
+# Originaldokumente (Ausweise, Kontoauszüge) nie committen
+Rent/dokumente/*
+!Rent/dokumente/.gitkeep
+*.pdf
+*.jpg
+*.jpeg
+*.png
+*.heic
+.DS_Store
