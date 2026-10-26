@@ -11,7 +11,7 @@ vermutlich nicht nachweisen können.
 ## Die Wohnungen (Stand 26.10.2026, sortiert nach Passung)
 
 Kriterien: max. $900/Woche, Bondi-Gegend (auch Rose Bay, Vaucluse, Woollahra, Paddington), hochwertig, kein alter Teppich.
-Übersicht mit Karten: [uebersicht.html](uebersicht.html)
+Übersicht mit Karten: [uebersicht.html](uebersicht.html), direkt im Browser öffnen (Doppelklick im synchronisierten Ordner)
 
 | Passung | Adresse | Miete/Wo | Zimmer | Besichtigung | Warnzeichen |
 |---|---|---|---|---|---|

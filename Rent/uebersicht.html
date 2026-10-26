@@ -1,5 +1,9 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Bondi Wohnungs-Shortlist</title>
-<meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;700&family=Atkinson+Hyperlegible:wght@400;700&family=JetBrains+Mono:wght@500&display=swap">
 <style>
@@ -20,7 +24,8 @@
   --bg:#0e1a1d; --surface:#152529; --ink:#e3eeef; --muted:#93a8ad; --line:#26393e;
   --sea:#4fc1c9; --sea-soft:#163a3e;
   --good:#6bd49a; --good-bg:#173527; --warn:#f0bc5c; --warn-bg:#3a2d12; --bad:#f08a80; --bad-bg:#3d1b18; color-scheme:dark}
-body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.5}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.5}
 .wrap{max-width:1180px;margin:0 auto;padding-block:28px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:28px}
 h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0}
 h1{font-size:clamp(1.7rem,4vw,2.4rem);letter-spacing:-.01em}
@@ -68,7 +73,8 @@ ul{margin:0;padding-left:18px;font-size:.88rem;display:grid;gap:2px}
 .foot a:hover{text-decoration:underline}
 .src{color:var(--muted);font-size:.8rem}
 </style>
-
+</head>
+<body>
 <div class="wrap">
   <header>
     <h1>Bondi Wohnungs-Shortlist</h1>
@@ -142,3 +148,6 @@ document.querySelectorAll("[data-f]").forEach(b => b.addEventListener("click", (
 document.querySelectorAll("[data-s]").forEach(b => b.addEventListener("click", () => { sort = b.dataset.s; render(); }));
 render();
 </script>
+
+</body>
+</html>
