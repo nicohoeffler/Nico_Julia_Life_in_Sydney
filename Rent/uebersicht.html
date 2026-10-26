@@ -1,0 +1,144 @@
+<title>Bondi Wohnungs-Shortlist</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;700&family=Atkinson+Hyperlegible:wght@400;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: ruhige Kopfzeile mit Terminleiste, darunter Kartenraster (auto-fill), Karte = Listing-Exposé */
+:root{
+  --bg:#eef3f4; --surface:#ffffff; --ink:#14262b; --muted:#5b6f74; --line:#d3dfe1;
+  --sea:#0f6e78; --sea-soft:#dcefef;
+  --good:#1f7a4a; --good-bg:#dff2e6; --warn:#9a6200; --warn-bg:#fbefd6; --bad:#b0302a; --bad-bg:#f9e0dd;
+  --f-display:"Familjen Grotesk","Helvetica Neue",Arial,sans-serif;
+  --f-body:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0e1a1d; --surface:#152529; --ink:#e3eeef; --muted:#93a8ad; --line:#26393e;
+  --sea:#4fc1c9; --sea-soft:#163a3e;
+  --good:#6bd49a; --good-bg:#173527; --warn:#f0bc5c; --warn-bg:#3a2d12; --bad:#f08a80; --bad-bg:#3d1b18; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0e1a1d; --surface:#152529; --ink:#e3eeef; --muted:#93a8ad; --line:#26393e;
+  --sea:#4fc1c9; --sea-soft:#163a3e;
+  --good:#6bd49a; --good-bg:#173527; --warn:#f0bc5c; --warn-bg:#3a2d12; --bad:#f08a80; --bad-bg:#3d1b18; color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.5}
+.wrap{max-width:1180px;margin:0 auto;padding-block:28px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:28px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0}
+h1{font-size:clamp(1.7rem,4vw,2.4rem);letter-spacing:-.01em}
+.lede{color:var(--muted);max-width:62ch;margin:6px 0 0}
+.crit{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.crit span{font-size:.8rem;padding:3px 10px;border-radius:999px;background:var(--sea-soft);color:var(--sea);font-weight:700}
+.label{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700}
+.dates{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.date{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:grid;gap:2px}
+.date b{font-family:var(--f-display);font-size:1.05rem}
+.date .t{font-family:var(--f-mono);color:var(--sea);font-size:.9rem}
+.controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.controls button{font:inherit;font-size:.85rem;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:6px 14px;cursor:pointer}
+.controls button[aria-pressed="true"]{background:var(--sea);border-color:var(--sea);color:var(--surface)}
+.controls button:focus-visible,a:focus-visible{outline:2px solid var(--sea);outline-offset:2px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:16px;align-items:start}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;display:grid;gap:14px;min-width:0}
+.card.out{opacity:.72}
+.top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.top h3{font-size:1.15rem;line-height:1.25}
+.sub{color:var(--muted);font-size:.85rem}
+.fit{flex:none;text-align:center;border-radius:10px;padding:6px 10px;min-width:62px}
+.fit b{display:block;font-family:var(--f-mono);font-size:1.15rem}
+.fit small{font-size:.66rem;text-transform:uppercase;letter-spacing:.08em}
+.hi{background:var(--good-bg);color:var(--good)} .mid{background:var(--warn-bg);color:var(--warn)} .lo{background:var(--bad-bg);color:var(--bad)}
+.price{display:grid;gap:6px}
+.price .row{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.price .amt{font-family:var(--f-display);font-size:1.6rem;font-weight:700;font-variant-numeric:tabular-nums}
+.bar{height:6px;border-radius:3px;background:var(--line);position:relative;overflow:hidden}
+.bar i{position:absolute;inset:0 auto 0 0;background:var(--sea);border-radius:3px}
+.specs{display:flex;flex-wrap:wrap;gap:6px}
+.specs span{font-size:.8rem;border:1px solid var(--line);border-radius:6px;padding:2px 8px}
+dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:.88rem}
+dt{color:var(--muted)} dd{margin:0;min-width:0}
+dd.ins-set{color:var(--sea);font-weight:700}
+ul{margin:0;padding-left:18px;font-size:.88rem;display:grid;gap:2px}
+.unk{color:var(--warn);font-size:.82rem}
+.verdict{font-size:.9rem;border-top:1px solid var(--line);padding-top:12px}
+.flags{display:flex;flex-wrap:wrap;gap:6px}
+.flags span{font-size:.75rem;font-weight:700;padding:2px 8px;border-radius:999px;background:var(--warn-bg);color:var(--warn)}
+.note{font-size:.8rem;color:var(--muted);font-style:italic}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.phone{font-family:var(--f-mono);font-size:.85rem;user-select:all}
+.foot a{font-weight:700;color:var(--sea);text-decoration:none;font-size:.88rem}
+.foot a:hover{text-decoration:underline}
+.src{color:var(--muted);font-size:.8rem}
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Bondi Wohnungs-Shortlist</h1>
+    <p class="lede">Nico &amp; Julia. 9 Wohnungen, bewertet gegen unsere Kriterien. Passung = grobe Schätzung, wie gut die Wohnung laut Listing passt; vor Ort ändert sich das.</p>
+    <div class="crit"><span>max. $900 / Woche</span><span>Bondi · North Bondi · Rose Bay · Vaucluse · Woollahra · Paddington</span><span>hochwertig, kein alter Teppich</span></div>
+  </header>
+
+  <section style="display:grid;gap:10px">
+    <div class="label">Feste Besichtigungen (Sydney-Zeit)</div>
+    <div class="dates" id="dates"></div>
+  </section>
+
+  <section style="display:grid;gap:14px">
+    <div class="controls" role="group" aria-label="Filter">
+      <span class="label">Zeigen</span>
+      <button id="f-all" data-f="all" aria-pressed="true">Alle</button>
+      <button id="f-insp" data-f="insp" aria-pressed="false">Mit Termin</button>
+      <button id="f-top" data-f="top" aria-pressed="false">Passung ≥ 60 %</button>
+      <span class="label" style="margin-left:8px">Sortieren</span>
+      <button id="s-fit" data-s="fit" aria-pressed="true">Passung</button>
+      <button id="s-rent" data-s="rent" aria-pressed="false">Preis</button>
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <p class="src">Daten von domain.com.au, abgerufen am 26.10.2026. Preise in AUD.</p>
+</div>
+
+<script>
+const DATA = [{"id": "ramsgate", "file": "04_ramsgate_ave.md", "addr": "2/26 Ramsgate Avenue", "suburb": "Bondi Beach", "url": "https://www.domain.com.au/unit-2-26-ramsgate-avenue-bondi-beach-nsw-2026-18383632", "rent": 850, "bond": "$3.400", "bed": 2, "bath": 1, "park": 0, "type": "Wohnung, Art déco", "avail": "19.11.2026", "features": ["2 Schlafzimmer", "Licht von Nordosten, Fenster auf drei Seiten", "offener Wohn-/Essbereich", "2 Gehminuten zum Strand"], "unknown": "Böden, Küche/Bad-Zustand, Klima, Geschirrspüler nicht angegeben", "insp": "Do 29.10.2026, 09:30–09:45 (Anmeldung über IRE)", "inspIso": "2026-10-29", "agent": "Roslyn Pozniak, Bondi Realty", "phone": "0415 119 029", "fit": 75, "verdict": "Bestes Preis-Platz-Verhältnis: 2 Zimmer für $850 in Strandnähe. Art déco heißt oft alte Bausubstanz, Küche und Bad vor Ort genau prüfen.", "flags": ["Zustand unbekannt"], "note": ""}, {"id": "odonnell", "file": "01_odonnell_st.md", "addr": "5A/93-97 O'Donnell Street", "suburb": "North Bondi", "url": "https://www.domain.com.au/5a-93-97-o-donnell-street-north-bondi-nsw-2026-18382173", "rent": 750, "bond": "$3.000", "bed": 1, "bath": 1, "park": 0, "type": "Studio / 1 Zi (Listing widersprüchlich)", "avail": "11.11.2026", "features": ["frisch renoviert", "Küche mit Steinarbeitsplatte", "modernes Bad", "Dielenboden", "interne Waschküche, Einbauschränke", "ruhige Sackgasse am O'Donnell St Reserve"], "unknown": "Klima, Geschirrspüler, Balkon nicht angegeben", "insp": "Mi 28.10.2026, 17:00–17:30", "inspIso": "2026-10-28", "agent": "Paul Andrew Plakidis, Paul Andrew Property", "phone": "0404 079 747", "fit": 70, "verdict": "Renoviert, ruhig, $150 unter Budget. Risiko: Beschreibung sagt Studio, für zwei Personen eventuell zu klein. Erdgeschoss.", "flags": ["evtl. nur Studio", "Erdgeschoss"], "note": "Miete jetzt $750 (vorher $700 notiert). Der alte Hinweis „Deposit taken“ ist überholt: Das Listing ist aktiv mit Besichtigungstermin."}, {"id": "curlewis", "file": "05_curlewis_st.md", "addr": "84 Curlewis Street", "suburb": "Bondi Beach", "url": "https://www.domain.com.au/84-curlewis-street-bondi-beach-nsw-2026-14923762", "rent": 900, "bond": "$1.800", "bed": 1, "bath": 1, "park": 1, "type": "Studio, möbliert, all-inclusive", "avail": "03.11.2026", "features": ["Neubau, Lift, Solar", "Klimaanlage, Balkon", "Geschirrspüler, Dielen, interne Waschküche", "gesicherter Parkplatz", "Strom, Wasser, Internet inklusive", "komplett möbliert"], "unknown": "Größe nicht angegeben", "insp": "kein Termin – Code 29013 per SMS/Anruf nennen", "inspIso": "", "agent": "Privatvermieter (For Sale By Owner)", "phone": "0483 902 965", "fit": 70, "verdict": "Qualitativ das Beste der Liste, und inkl. Nebenkosten (≈ $40–60/W gespart) effektiv unter Budget. Aber Studio und privater Vermieter: Wohnung vor jeder Zahlung besichtigen, nichts vorab überweisen.", "flags": ["Studio", "Privatvermieter: Betrugs-Check"], "note": ""}, {"id": "lamrock", "file": "06_lamrock_ave.md", "addr": "5/14 Lamrock Avenue", "suburb": "Bondi Beach", "url": "https://www.domain.com.au/5-14-lamrock-avenue-bondi-beach-nsw-2026-8584607", "rent": 875, "bond": "$3.500", "bed": 1, "bath": 1, "park": 0, "type": "Wohnung", "avail": "sofort", "features": ["moderne Küche", "Geschirrspüler", "Dielenboden", "frisch gestrichen", "Herz von Bondi Beach"], "unknown": "Bad-Zustand, Klima, Balkon nicht angegeben", "insp": "Di 27.10.2026, 12:00–12:15", "inspIso": "2026-10-27", "agent": "Joseph Miazzi, Coyle Everett", "phone": "0409 510 727", "fit": 65, "verdict": "Solide 1-Zimmer-Wohnung in Top-Lage, nah am Budgetlimit. Erdgeschoss: Licht, Lärm und Sicherheit prüfen. Die Listing-ID ist sehr alt, die Wohnung wird also oft neu vermietet. Nach dem Grund fragen.", "flags": ["Erdgeschoss", "häufiger Mieterwechsel?"], "note": ""}, {"id": "blair", "file": "03_blair_st.md", "addr": "3/105 Blair Street", "suburb": "North Bondi", "url": "https://www.domain.com.au/3-105-blair-street-north-bondi-nsw-2026-18367833", "rent": 850, "bond": "$3.400", "bed": 1, "bath": 1, "park": 0, "type": "Wohnung, Art déco", "avail": "sofort", "features": ["Licht von Norden", "neue Küche", "Waschmaschine"], "unknown": "", "insp": "Julia und ihre Mutter waren schon dort", "inspIso": "", "agent": "PPD Real Estate Bondi", "phone": "02 9365 5888", "fit": 70, "verdict": "Bisheriger Favorit (nicht unter den 8 neuen Links). Verfügbarkeit war unklar, beim Makler nachfragen.", "flags": ["Verfügbarkeit unklar"], "note": "Aus der bestehenden Liste übernommen, nicht neu geprüft."}, {"id": "campbell", "file": "07_campbell_pde.md", "addr": "13/130 Campbell Parade", "suburb": "Bondi Beach", "url": "https://www.domain.com.au/13-130-campbell-parade-bondi-beach-nsw-2026-18386739", "rent": 600, "bond": "$1.200", "bed": 0, "bath": 1, "park": 0, "type": "Studio", "avail": "sofort / ab 26.10.2026", "features": ["Strandfront-Gebäude an der Campbell Parade", "moderne Küche und Bad", "Dielenboden", "Haustiere nach Absprache"], "unknown": "Größe, Blick, Klima nicht angegeben", "insp": "kein Termin – beim Agent anfragen", "inspIso": "", "agent": "Anastasia Leone, BresicWhitney East", "phone": "0433 609 080", "fit": 55, "verdict": "Billigste Option in bester Lage, aber ein Studio für zwei Personen. Campbell Parade ist laut (Verkehr, Nachtleben). Nur interessant, wenn Blick und Größe überzeugen.", "flags": ["Studio für 2", "Lärm Campbell Pde"], "note": ""}, {"id": "bondird168", "file": "08_bondi_rd_168.md", "addr": "10/168 Bondi Road", "suburb": "Bondi", "url": "https://www.domain.com.au/10-168-bondi-road-bondi-nsw-2026-17317483", "rent": 850, "bond": "$3.400", "bed": 1, "bath": 1, "park": 1, "type": "Wohnung", "avail": "06.11.2026", "features": ["„modern, stilvoll, geräumig“ (laut Makler)", "Parkplatz", "zwischen Bondi Junction und Strand"], "unknown": "Keine Ausstattungsliste: Böden, Küche, Klima unbekannt", "insp": "kein Termin – Buchung über Snug", "inspIso": "", "agent": "Colin Cronin, Krulis Residential", "phone": "0411 887 197", "fit": 50, "verdict": "Parkplatz ist ein Plus, aber das Listing ist sehr dünn und die Bondi Road ist eine laute Busstrecke. Ohne Fotos/Details nicht einschätzbar.", "flags": ["Bondi Rd Lärm", "kaum Infos"], "note": ""}, {"id": "bondibeach2027", "file": "09_bondi_beach_moebliert.md", "addr": "Adresse auf Anfrage", "suburb": "Bondi Beach", "url": "https://www.domain.com.au/bondi-beach-nsw-2026-18012892", "rent": 900, "bond": "nicht angegeben", "bed": 1, "bath": 1, "park": null, "type": "Wohnung, möbliert", "avail": "17.04.2027", "features": ["komplett möbliert", "neues Bad", "groß und hell", "ruhig im hinteren Teil eines gesicherten Blocks"], "unknown": "Adresse, Böden, Parkplatz nicht angegeben", "insp": "kein Termin", "inspIso": "", "agent": "Rosio Flynn, Bondi Beach International Agency", "phone": "0412 468 335", "fit": 25, "verdict": "Erst ab 17.04.2027 frei, fast sechs Monate zu spät. Nur relevant, falls ihr eine Übergangslösung habt.", "flags": ["frei erst April 2027"], "note": ""}, {"id": "bondird270", "file": "02_bondi_rd.md", "addr": "3/270 Bondi Road", "suburb": "Bondi", "url": "https://www.domain.com.au/3-270-bondi-road-bondi-nsw-2026-18333548", "rent": 579, "bond": "$1.158", "bed": 1, "bath": 1, "park": 1, "type": "Wohnung (Affordable Housing)", "avail": "sofort", "features": ["frisch abgeschliffene Dielen", "Balkon", "gesicherter Parkplatz", "interne Waschküche, Badewanne"], "unknown": "Küche, Klima nicht angegeben", "insp": "kein Termin – Buchung über Snug", "inspIso": "", "agent": "Echo Realty (Waverley Council Programm)", "phone": "1800 693 246", "fit": 15, "verdict": "Sozialwohnung aus dem Affordable-Housing-Programm von Waverley Council, 25 % unter Markt, nur für berechtigte Haushalte mit niedrigem/mittlerem Einkommen. Mit Guarantor-Eltern und eurem Budget sehr wahrscheinlich nicht berechtigt.", "flags": ["Affordable Housing: Berechtigung nötig"], "note": "Neu: Miete $579 und Affordable-Housing-Status. Der alte Richtwert $950 (Unit 1) passt nicht zu diesem Programm."}];
+const BUDGET = 900;
+let filter = "all", sort = "fit";
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const cls = f => f >= 65 ? "hi" : f >= 45 ? "mid" : "lo";
+const bedTxt = b => b === 0 ? "Studio" : b + " Schlafzi.";
+const parkTxt = p => p === null ? "Parkplatz ?" : p ? p + " Parkplatz" : "kein Parkplatz";
+
+function card(x){
+  const pct = Math.min(100, x.rent / BUDGET * 100);
+  const diff = BUDGET - x.rent;
+  return `<article class="card ${x.fit < 40 ? "out" : ""}">
+    <div class="top"><div><h3>${esc(x.addr)}</h3><div class="sub">${esc(x.suburb)} · ${esc(x.type)}</div></div>
+      <div class="fit ${cls(x.fit)}"><b>${x.fit}%</b><small>Passung</small></div></div>
+    <div class="price"><div class="row"><span class="amt">$${x.rent}</span><span class="sub">/ Woche · ${diff >= 0 ? "$" + diff + " unter Budget" : "$" + (-diff) + " über Budget"}</span></div>
+      <div class="bar" aria-hidden="true"><i style="width:${pct}%"></i></div></div>
+    <div class="specs"><span>${bedTxt(x.bed)}</span><span>${x.bath} Bad</span><span>${parkTxt(x.park)}</span></div>
+    <dl><dt>Frei ab</dt><dd>${esc(x.avail)}</dd>
+      <dt>Besichtigung</dt><dd class="${x.inspIso ? "ins-set" : ""}">${esc(x.insp)}</dd>
+      <dt>Kaution</dt><dd>${esc(x.bond)}</dd></dl>
+    <div><ul>${x.features.map(f => `<li>${esc(f)}</li>`).join("")}</ul>${x.unknown ? `<div class="unk">Offen: ${esc(x.unknown)}</div>` : ""}</div>
+    <div class="verdict">${esc(x.verdict)}</div>
+    ${x.flags.length ? `<div class="flags">${x.flags.map(f => `<span>${esc(f)}</span>`).join("")}</div>` : ""}
+    ${x.note ? `<div class="note">${esc(x.note)}</div>` : ""}
+    <div class="foot"><div><div class="sub">${esc(x.agent)}</div><span class="phone">${esc(x.phone)}</span></div>
+      <a href="${esc(x.url)}" target="_blank" rel="noopener">Listing öffnen ↗</a></div>
+  </article>`;
+}
+function render(){
+  let rows = DATA.filter(x => filter === "all" || (filter === "insp" ? !!x.inspIso : x.fit >= 60));
+  rows.sort((a,b) => sort === "fit" ? b.fit - a.fit || a.rent - b.rent : a.rent - b.rent);
+  document.getElementById("grid").innerHTML = rows.map(card).join("");
+  document.querySelectorAll("[data-f]").forEach(b => b.setAttribute("aria-pressed", b.dataset.f === filter));
+  document.querySelectorAll("[data-s]").forEach(b => b.setAttribute("aria-pressed", b.dataset.s === sort));
+}
+const dates = DATA.filter(x => x.inspIso).sort((a,b) => a.inspIso.localeCompare(b.inspIso));
+document.getElementById("dates").innerHTML = dates.map(x => {
+  const [day, time] = x.insp.split(", ");
+  return `<div class="date"><span class="label">${esc(day)}</span><b>${esc(x.addr)}</b><span class="t">${esc(time)} · $${x.rent}/W</span></div>`;
+}).join("");
+document.querySelectorAll("[data-f]").forEach(b => b.addEventListener("click", () => { filter = b.dataset.f; render(); }));
+document.querySelectorAll("[data-s]").forEach(b => b.addEventListener("click", () => { sort = b.dataset.s; render(); }));
+render();
+</script>
