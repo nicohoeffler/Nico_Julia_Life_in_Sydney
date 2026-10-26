@@ -8,16 +8,24 @@ weil Makler meist ein Mindesteinkommen von etwa **Miete × 3** (brutto) verlange
 vermutlich nicht nachweisen können.
 → Details: [unterlagen/guarantor_eltern.md](unterlagen/guarantor_eltern.md)
 
-## Die drei Wohnungen
+## Die Wohnungen (Stand 26.10.2026, sortiert nach Passung)
 
-| # | Adresse | Miete/Wo | Kaution | Zimmer | Makler | Besichtigung | Status |
-|---|---|---|---|---|---|---|---|
-| 1 | [5A/93-97 O'Donnell St, North Bondi](listings/01_odonnell_st.md) | $700 ⚠ | – | 1 Bett / 1 Bad / Parkplatz | ⚠ offen | **Sa 24.10.** – Zeit offen | ⚠ Laut Suchergebnis „deposit taken“, prüfen |
-| 2 | [3/270 Bondi Rd, Bondi](listings/02_bondi_rd.md) | ⚠ offen | – | ⚠ offen | ⚠ offen | ⚠ offen | – |
-| 3 | [3/105 Blair St, North Bondi](listings/03_blair_st.md) | $850 | $3.400 | 1 Bett / 1 Bad | PPD Real Estate Bondi | ⚠ keine angesetzt | **Julia + Mutter waren schon dort**, Fokus |
+Kriterien: max. $900/Woche, Bondi-Gegend (auch Rose Bay, Vaucluse, Woollahra, Paddington), hochwertig, kein alter Teppich.
+Übersicht mit Karten: [uebersicht.html](uebersicht.html), direkt im Browser öffnen (Doppelklick im synchronisierten Ordner)
 
-⚠ = nicht verifiziert. Domain.com.au war beim Anlegen nicht direkt abrufbar, die Daten stammen aus
-Suchergebnissen und müssen gegen das Live-Listing geprüft werden.
+| Passung | Adresse | Miete/Wo | Zimmer | Besichtigung | Warnzeichen |
+|---|---|---|---|---|---|
+| 75 % | [2/26 Ramsgate Avenue, Bondi Beach](listings/04_ramsgate_ave.md) | $850 | 2 Zi | Do 29.10.2026, 09:30–09:45 (Anmeldung über IRE) | Zustand unbekannt |
+| 70 % | [5A/93-97 O'Donnell Street, North Bondi](listings/01_odonnell_st.md) | $750 | 1 Zi | Mi 28.10.2026, 17:00–17:30 | evtl. nur Studio, Erdgeschoss |
+| 70 % | [84 Curlewis Street, Bondi Beach](listings/05_curlewis_st.md) | $900 | 1 Zi | kein Termin – Code 29013 per SMS/Anruf nennen | Studio, Privatvermieter: Betrugs-Check |
+| 70 % | [3/105 Blair Street, North Bondi](listings/03_blair_st.md) | $850 | 1 Zi | Julia und ihre Mutter waren schon dort | Verfügbarkeit unklar |
+| 65 % | [5/14 Lamrock Avenue, Bondi Beach](listings/06_lamrock_ave.md) | $875 | 1 Zi | Di 27.10.2026, 12:00–12:15 | Erdgeschoss, häufiger Mieterwechsel? |
+| 55 % | [13/130 Campbell Parade, Bondi Beach](listings/07_campbell_pde.md) | $600 | Studio | kein Termin – beim Agent anfragen | Studio für 2, Lärm Campbell Pde |
+| 50 % | [10/168 Bondi Road, Bondi](listings/08_bondi_rd_168.md) | $850 | 1 Zi | kein Termin – Buchung über Snug | Bondi Rd Lärm, kaum Infos |
+| 25 % | [Adresse auf Anfrage, Bondi Beach](listings/09_bondi_beach_moebliert.md) | $900 | 1 Zi | kein Termin | frei erst April 2027 |
+| 15 % | [3/270 Bondi Road, Bondi](listings/02_bondi_rd.md) | $579 | 1 Zi | kein Termin – Buchung über Snug | Affordable Housing: Berechtigung nötig |
+
+Feste Besichtigungen stehen in Nicos Google Calendar.
 
 ## Ablauf
 1. [ ] Unterlagen-Paket **Nico** fertig: [unterlagen/nico.md](unterlagen/nico.md)
