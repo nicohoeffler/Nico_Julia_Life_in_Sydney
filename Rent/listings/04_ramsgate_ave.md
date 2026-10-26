@@ -5,7 +5,7 @@
 - Typ: Wohnung, Art déco · 2 Schlafzimmer / 1 Bad / kein Parkplatz
 - Verfügbar ab: 19.11.2026
 - Makler: Roslyn Pozniak, Bondi Realty, 0415 119 029
-- Besichtigung: **Do 29.10.2026, 09:30–09:45 (Anmeldung über IRE)** (im Kalender steht bereits „Wohnungsbesichtigung Julia“ 09:15–10:15, vermutlich dieser Termin)
+- Besichtigung: **Do 29.10.2026, 09:30–09:45 (Anmeldung über IRE)** (im Google Calendar eingetragen)
 
 ## Ausstattung laut Listing
 - 2 Schlafzimmer
