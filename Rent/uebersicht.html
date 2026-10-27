@@ -33,8 +33,10 @@ h1{font-size:clamp(1.7rem,4vw,2.4rem);letter-spacing:-.01em}
 .crit{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
 .crit span{font-size:.8rem;padding:3px 10px;border-radius:999px;background:var(--sea-soft);color:var(--sea);font-weight:700}
 .label{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:700}
-.dates{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
-.date{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:grid;gap:2px}
+.dates{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x proximity;padding-bottom:8px;-webkit-overflow-scrolling:touch}
+.date{flex:0 0 220px;scroll-snap-align:start;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:grid;gap:2px}
+.date.past{opacity:.5}
+.date .n{font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
 .date b{font-family:var(--f-display);font-size:1.05rem}
 .date .t{font-family:var(--f-mono);color:var(--sea);font-size:.9rem}
 .controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
@@ -83,7 +85,7 @@ ul{margin:0;padding-left:18px;font-size:.88rem;display:grid;gap:2px}
   </header>
 
   <section style="display:grid;gap:10px">
-    <div class="label">Feste Besichtigungen (Sydney-Zeit)</div>
+    <div class="label">Feste Besichtigungen (Sydney-Zeit, chronologisch → nach rechts scrollen)</div>
     <div class="dates" id="dates"></div>
   </section>
 
@@ -139,10 +141,13 @@ function render(){
   document.querySelectorAll("[data-f]").forEach(b => b.setAttribute("aria-pressed", b.dataset.f === filter));
   document.querySelectorAll("[data-s]").forEach(b => b.setAttribute("aria-pressed", b.dataset.s === sort));
 }
-const dates = DATA.filter(x => x.inspIso).sort((a,b) => a.inspIso.localeCompare(b.inspIso));
-document.getElementById("dates").innerHTML = dates.map(x => {
+// Termine chronologisch (Datum + Startzeit, Sydney-Zeit); vergangene werden ausgegraut
+const startOf = x => x.inspIso + "T" + ((x.insp.match(/(\d{2}:\d{2})/) || [, "00:00"])[1]);
+const sydNow = new Date().toLocaleString("sv-SE", {timeZone: "Australia/Sydney"}).replace(" ", "T").slice(0, 16);
+const dates = DATA.filter(x => x.inspIso).sort((a,b) => startOf(a).localeCompare(startOf(b)));
+document.getElementById("dates").innerHTML = dates.map((x, i) => {
   const [day, time] = x.insp.split(", ");
-  return `<div class="date"><span class="label">${esc(day)}</span><b>${esc(x.addr)}</b><span class="t">${esc(time)} · $${x.rent}/W</span></div>`;
+  return `<div class="date ${startOf(x) < sydNow ? "past" : ""}"><span class="label">${esc(day)} <span class="n">${i + 1}/${dates.length}</span></span><b>${esc(x.addr)}</b><span class="t">${esc(time)} · $${x.rent}/W</span></div>`;
 }).join("");
 document.querySelectorAll("[data-f]").forEach(b => b.addEventListener("click", () => { filter = b.dataset.f; render(); }));
 document.querySelectorAll("[data-s]").forEach(b => b.addEventListener("click", () => { sort = b.dataset.s; render(); }));
