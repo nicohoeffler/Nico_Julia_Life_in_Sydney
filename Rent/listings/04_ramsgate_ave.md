@@ -1,4 +1,6 @@
-# 2/26 Ramsgate Avenue, Bondi Beach NSW 2026
+# 2/26 Ramsgate Avenue, Bondi Beach NSW 2026 (★ FAVORIT: BEWERBEN)
+
+> 29.10.2026: Besichtigung verpasst. Bondi Realty anrufen: neuer Termin oder Bewerbung über IRE ohne Besichtigung?
 
 - Listing: https://www.domain.com.au/unit-2-26-ramsgate-avenue-bondi-beach-nsw-2026-18383632
 - Miete: **$850/Woche**, Kaution $3.400

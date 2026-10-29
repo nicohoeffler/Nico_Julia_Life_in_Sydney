@@ -1,4 +1,6 @@
-# 5A/93-97 O'Donnell Street, North Bondi NSW 2026
+# 5A/93-97 O'Donnell Street, North Bondi NSW 2026 (PLAN B: andere Lösung)
+
+> 29.10.2026: Am 28.10. besichtigt. Kandidat für eine andere Lösung, behalten.
 
 - Listing: https://www.domain.com.au/5a-93-97-o-donnell-street-north-bondi-nsw-2026-18382173
 - Miete: **$750/Woche**, Kaution $3.000
