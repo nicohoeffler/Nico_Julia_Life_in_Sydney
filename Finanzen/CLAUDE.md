@@ -22,7 +22,7 @@ Liefergegenstände: verständliches PDF (kein Jargon, Lexikon, ehrliche Szenarie
 Siehe [people/julia/annahmen.md](people/julia/annahmen.md). Dort steht jede Annahme mit Status `offen` / `bestätigt`. **Nichts als Fakt behandeln, was dort `offen` ist.**
 
 ## 4. Arbeitsregeln
-- Währung AUD. Dokumentsprache für Julia: **offen** (siehe annahmen.md).
+- Währung AUD. Dokumente für Julia auf **Englisch** (Nico, 3.11.2026).
 - Jede Empfehlung mit: Begründung, Alternativen, Konfidenz %, „was müsste stimmen, damit das falsch ist“.
 - Gebühren, MER, Steuerregeln, Super-Caps **immer per Websuche verifizieren** und mit Quelle + Datum in `docs/research/` notieren. Keine ungeprüften Marktzahlen in Dokumente für Julia; Zahlen nur mit Quelle oder als Annahme markiert.
 - Renditeannahme langfristig 6,5–7 % nominal für globale Aktien, mit Minusjahren; nie aus Boom-Jahren ableiten.

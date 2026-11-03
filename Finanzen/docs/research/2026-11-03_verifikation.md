@@ -67,3 +67,14 @@ Wichtig: **Auf der ASX gibt es (nach dieser Recherche) kein Ein-Produkt-Äquival
 - Vanguard Personal Investor Konditionen; IBKR Recurring Investments; VWCE/VWRA aktuelle TER.
 - Steuerliche Behandlung irischer thesaurierender ETFs für AU-Steuerinländer: keine ATO-Aussage gefunden (siehe Broker-Notiz).
 - Einkommensteuer-Tarif 2026–27, Super Guarantee-Satz.
+
+## Nachtrag 3.11.2026 (Julia = Citizen, Welt-ETF ohne Home Bias)
+
+| Punkt | Ergebnis | Quelle |
+|---|---|---|
+| VWRA / FTSE All-World UCITS | OCF **0,14 %** (Senkung von 0,19 % ab 28.7.2026); 3.821 Titel; US 62,2 %; Dividendenrendite der Aktien 1,5 %; Vanguard Funds plc, Irland | [Vanguard Factsheet 30.9.2026](https://fund-docs.vanguard.com/FTSE_All-World_UCITS_ETF_USD_Accumulating_9679_NETH_INT_EN.pdf) (primär), [Trustnet](https://www.trustnet.com/news/13480976/vanguard-cuts-fees-on-europes-largest-ftse-all-world-etf) |
+| BGBL | 12-Monats-Ausschüttungsrendite 1,2 %, 1.310 Indextitel, 0,08 % | [BGBL Factsheet 30.9.2026](https://www.betashares.com.au/files/factsheets/BGBL-Factsheet.pdf) (primär) |
+| BEMG | MSCI Emerging Markets, 0,35 % | [ReviewETF](https://www.reviewetf.com.au/etf/BEMG) (sekundär) |
+| CMC Invest international | FX „up to 0.60%“; **kein Auto-invest**; LSE $0 Brokerage; meist A$1.000 Mindestorder international; CHESS nur ASX, international Custodian BNP Paribas | [Quantroutine, verifiziert Juli 2026](https://quantroutine.com/brokers/cmc-invest/) (sekundär), [CMC Brokerage](https://www.cmcmarkets.com/en-au/stockbroking/brokerage-rates) (primär) |
+| Steuertarif Residents 2026–27 | 0 bis 18.200 / 16 % bis 45.000 / 30 % bis 135.000 / 37 % bis 190.000 / 45 %; zuzüglich 2 % Medicare | [ATO, aktualisiert 13.8.2026](https://www.ato.gov.au/tax-rates-and-codes/tax-rates-australian-residents) (primär) |
+| Foreign Accumulation Fund | 2011 nur Entwurf, Inkrafttreten an Royal Assent gekoppelt; erfasst nur Fonds mit ≥ 80 % Schuldtiteln. Endgültige Aufgabe nicht primär verifiziert | [Treasury 29.6.2011](https://ministers.treasury.gov.au/ministers/bill-shorten-2010/media-releases/proposed-faf-rule-will-not-apply-2010-11-income-year), [Mondaq 2011](https://admin.mondaq.com/australia/income-tax/134670/the-bizarre-world-of-tax-foreign-accumulation-funds) |
