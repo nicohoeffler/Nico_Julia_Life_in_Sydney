@@ -3,7 +3,7 @@
 Vergleicht
   A) VWRA (Vanguard FTSE All-World UCITS, thesaurierend, Irland) über CMC Invest
   B) BGBL (Betashares Global Shares, ausschüttend, AU-Trust) über Betashares Direct / CMC
-  C) BGBL 90 % + BEMG 10 % (Schwellenländer ergänzt)
+  C) BGBL 88 % + BEMG 12 % (Schwellenländer ergänzt, ≈ FTSE All-World ex AU)
 
 Annahmen (Quellen: docs/research/2026-11-03_*.md). Alles AUD, nominal.
 - Gleiche Bruttorendite r für alle Produkte (Indexunterschiede ignoriert).
@@ -57,7 +57,10 @@ def simulate(p: Product, monthly: float, years: int, r: float, t: float,
 
 VWRA = Product("VWRA via CMC", fee=0.0014, dist_yield=0.0, leak=0.0015, fx=0.006)
 BGBL = Product("BGBL", fee=0.0008, dist_yield=0.012)
-BGBL_EM = Product("BGBL 90 % + BEMG 10 %", fee=0.9 * 0.0008 + 0.1 * 0.0035, dist_yield=0.013)
+# BEMG schüttet nicht aus (thesaurierender irischer Swap-UCITS darunter), daher nur BGBL-Anteil ausschüttend.
+# Quellensteuer-Leckage im BEMG-Anteil (keine FITO): 12 % x ~0,25 % = 0,03 % p. a. (Annahme).
+BGBL_EM = Product("BGBL 88 % + BEMG 12 %", fee=0.88 * 0.0008 + 0.12 * 0.0035,
+                  dist_yield=0.88 * 0.012, leak=0.0003)
 VWRA_WORST = Product("VWRA, falls ATO laufend besteuert", fee=0.0014, dist_yield=0.015,
                      leak=0.0015, fx=0.006)
 
