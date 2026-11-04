@@ -56,7 +56,7 @@ Nicos 10.000 passen zu dieser Aufteilung (Konfidenz 70 %). Mehr würde ich erst 
 - Steuerjahr 1.7.–30.6.; Erklärung selbst bis 31.10., über Tax Agent später (95 %).
 - BGBL: Ausschüttungen jedes Jahr steuerpflichtig, auch wenn reinvestiert; Werte aus dem AMMA-Statement, Quellensteuer als FITO (90 %).
 - BEMG: keine Ausschüttung, also keine laufende Steuer (75 %).
-- Verkauf: CGT zum Grenzsteuersatz; nach > 12 Monaten nur 50 % des Gewinns steuerpflichtig. Jede Monatsrate ist eine eigene Tranche, Kaufbelege aufheben (90 %).
+- Verkauf: CGT zum Grenzsteuersatz. **Bis 30.6.2027:** nach > 12 Monaten nur 50 % des Gewinns. **Ab 1.7.2027 (Gesetz):** nur der inflationsbereinigte Gewinn, aber **mind. 30 %** Steuer darauf. Jede Monatsrate ist eine eigene Tranche, Kaufbelege aufheben (90 %).
 - Kapitalverluste nur mit Kapitalgewinnen verrechenbar (90 %).
 - ABN: kein Steuerabzug → 25 % des Gewinns zurücklegen; Business-Ausgaben (Software, Equipment-Abschreibung) absetzbar; GST-Pflicht erst ab A$75.000 Umsatz (95 %).
 - Mehrere Arbeitgeber: Steuerfreibetrag nur bei einem beanspruchen (90 %).

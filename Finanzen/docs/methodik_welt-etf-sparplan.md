@@ -85,13 +85,20 @@ Die Abweichung liegt bei USA +2,8 Pp., der Rest bei ±0,6 Pp. Die Ursache: VWRA 
 
 | Produkt | Laufend | Verkauf | Quellensteuer | Konfidenz |
 |---|---|---|---|---|
-| BGBL | Ausschüttung (~1,2 %) jedes Jahr zum Grenzsteuersatz (laut AMMA-Statement), auch bei Wiederanlage | CGT, 50 % Discount nach > 12 Monaten | als FITO anrechenbar | 90 % |
-| BEMG | Laut Betashares keine Ausschüttung, also keine laufende Steuer. Ob die AMIT-Zurechnung trotzdem etwas erfasst, ist nicht explizit bestätigt | CGT, 50 % Discount (laut BEMG-FAQ) | **keine** FITO (laut BEMG-FAQ) | 75 % |
-| VWRA (Vergleich) | keine (irische plc; FIF 2010 abgeschafft; FAF nie in Kraft und nur für ≥ 80 % Anleihen; CFC braucht Kontrolle) | CGT, 50 % Discount | nicht anrechenbar | 75–80 % |
+| BGBL | Ausschüttung (~1,2 %) jedes Jahr zum Grenzsteuersatz (laut AMMA-Statement), auch bei Wiederanlage | CGT: bis 30.6.2027 50 % Discount; ab 1.7.2027 nur der **reale** (CPI-indexierte) Gewinn, zum Grenzsteuersatz, **mind. 30 %** | als FITO anrechenbar | 90 % |
+| BEMG | Laut Betashares keine Ausschüttung, also keine laufende Steuer. Ob die AMIT-Zurechnung trotzdem etwas erfasst, ist nicht explizit bestätigt | CGT: bis 30.6.2027 50 % Discount; ab 1.7.2027 nur der **reale** (CPI-indexierte) Gewinn, zum Grenzsteuersatz, **mind. 30 %** | **keine** FITO (laut BEMG-FAQ) | 75 % |
+| VWRA (Vergleich) | keine (irische plc; FIF 2010 abgeschafft; FAF nie in Kraft und nur für ≥ 80 % Anleihen; CFC braucht Kontrolle) | CGT: bis 30.6.2027 50 % Discount; ab 1.7.2027 nur der **reale** (CPI-indexierte) Gewinn, zum Grenzsteuersatz, **mind. 30 %** | nicht anrechenbar | 75–80 % |
 
 Bemerkenswert: Betashares selbst baut BEMG auf genau der Logik „AU-Anleger hält irischen thesaurierenden UCITS-Fonds, steuerpflichtig erst bei Verkauf“. Das stützt die Hypothese zu VWRA (Konfidenz dadurch 75 → 80 %).
 
 Der Grenzsteuersatz (ATO 2026–27, Residents): 16 % bis A$45.000, 30 % bis A$135.000, 37 % bis A$190.000, 45 % darüber, zuzüglich 2 % Medicare ([ATO, 13.8.2026](https://www.ato.gov.au/tax-rates-and-codes/tax-rates-australian-residents)).
+
+## 4a. CGT-Reform ab 1.7.2027 (Gesetz)
+- *Treasury Laws Amendment (Tax Reform No. 1) Act 2026*; ATO: „now law“ ([ATO, aktualisiert 29.6.2026](https://www.ato.gov.au/about-ato/new-legislation/in-detail/individuals/tax-reform-boosting-home-ownership-reforming-negative-gearing-and-capital-gains-tax), [Budget 2026–27](https://budget.gov.au/content/04-tax-reform.htm)).
+- Für Individuals, Trusts, Partnerships: 50 %-Discount wird durch **CPI-Indexierung der Kostenbasis** und eine **Mindeststeuer von 30 % auf Gewinne** ersetzt.
+- Gilt nur für Gewinne, die **nach dem 1.7.2027** entstehen. Laut [Moore Australia (5/2026)](https://www.moore-australia.com.au/news/federal-budget-series-cgt-discount-reform/) wird die Kostenbasis zum 1.7.2027 auf den Marktwert gesetzt (sekundär, Konfidenz 70 %).
+- Superfonds: auf der ATO-Seite nicht behandelt (offen).
+- Folgen für den Plan: (1) Der Steuervorteil thesaurierender Fonds (VWRA, BEMG) schrumpft, weil umgewandelte Dividenden nicht mehr zum halben Satz besteuert werden; BGBL liegt im Modell jetzt **vor** VWRA. (2) Auch bei niedrigem Einkommen im Ruhestand gelten mind. 30 % auf reale Gewinne. (3) Super wird relativ attraktiver (abhängig von der noch offenen Super-Behandlung).
 
 ## 5. Kosten- und Steuermodell
 
@@ -99,18 +106,18 @@ Code: [`models/scenarios.py`](../models/scenarios.py). Annahmen:
 - Gleiche Bruttorendite für alle Produkte, **7 %** (realistisch) bzw. **5 %** (vorsichtig) nominal p. a. **(Annahme)**
 - Grenzsteuersatz 32 % oder 39 %, Exit-Steuer gleich (Variante: 18 % in Rente)
 - BGBL: Ausschüttung 1,2 % jährlich versteuert, Rest reinvestiert; VWRA: 0,15 % Quellensteuer-Leckage p. a. **(Annahme)**, 0,6 % FX je Kauf/Verkauf
-- Verkauf aller Anteile am Ende, CGT mit 50 % Discount
+- Verkauf aller Anteile am Ende. **CGT nach Regel ab 1.7.2027** (CPI 2,5 % **(Annahme)**, Mindeststeuer 30 %), vereinfacht für die ganze Haltedauer
 
 Ergebnis (A$1.000/Monat, 7 %, 32 %, netto nach Exit-CGT):
 
 | | 10 J | 20 J | 30 J |
 |---|---|---|---|
-| BGBL | 160.900 | 448.500 | 974.100 |
-| **BGBL 88 / BEMG 12** | 160.700 | 447.300 | 970.300 |
-| VWRA via CMC | 159.800 | 448.200 | 982.800 |
-| VWRA, Worst Case (ATO besteuert laufend) | 157.200 | 430.700 | 916.700 |
+| BGBL | 159.800 | 439.400 | 938.500 |
+| **BGBL 88 / BEMG 12** | 159.400 | 437.500 | 932.200 |
+| VWRA via CMC | 157.400 | 431.200 | 919.900 |
+| VWRA, Worst Case (ATO besteuert laufend) | 157.100 | 426.700 | 897.100 |
 
-Interpretation: Die Unterschiede liegen ≤ 1–2 % über 30 Jahre, also innerhalb der Modellunsicherheit. **Die Wahl zwischen VWRA und der Betashares-Lösung ist kostenseitig neutral.** Entscheidend sind Automatik und steuerliche Klarheit, und dort liegt Betashares vorn.
+Interpretation (neue CGT-Regel): BGBL liegt nach 30 Jahren ~2 % vor VWRA. Mit der alten 50 %-Regel lag VWRA ~1 % vorn. Beides innerhalb der Modellunsicherheit. **Die Wahl zwischen VWRA und der Betashares-Lösung ist kostenseitig neutral.** Entscheidend sind Automatik und steuerliche Klarheit, und dort liegt Betashares vorn.
 Modellstand: BEMG ist als nicht ausschüttend gerechnet, mit 0,03 % p. a. Quellensteuer-Leckage **(Annahme)**. Indexunterschiede (z. B. Small Caps in VWRA) sind nicht modelliert.
 
 ## 6. Vorgeschlagener Plan
@@ -124,7 +131,7 @@ Modellstand: BEMG ist als nicht ausschüttend gerechnet, mit 0,03 % p. a. Quelle
 5. **Einmalbetrag (Erspartes minus Notgroschen):** gestaffelt über **6–12 Monate** als erhöhte Auto-invest-Rate; bis dahin auf dem Hochzins-Sparkonto. Begründung: Einmalanlage schlägt Staffelung historisch in ca. 2/3 der Fälle (Vanguard-Studien, Konfidenz 80 %). Die Staffelung ist eine bewusste Absicherung gegen Reue, keine Renditeoptimierung.
 6. **Rebalancing:** keins. Die feste 88/12-Aufteilung jeder Rate hält die Gewichte nahe am Ziel; einmal pro Jahr prüfen.
 7. **Ausschüttungen BGBL:** wiederanlegen (ob Betashares Direct automatische Wiederanlage anbietet, ist **nicht verifiziert**; sonst landen sie im Wallet und gehen in die nächste Auto-invest-Rate).
-8. **Steuer:** jährliches AMMA-Statement in die Steuererklärung; nichts verkaufen innerhalb von 12 Monaten nach Kauf (CGT-Discount).
+8. **Steuer:** jährliches AMMA-Statement in die Steuererklärung. Ab 1.7.2027 gilt die neue CGT-Regel (s. Abschnitt 4a); die 12-Monats-Grenze verliert für Verkäufe danach ihre Bedeutung (Konfidenz 70 %, Detailregeln prüfen).
 9. **Super (separater, größerer Hebel):** Anlageoption und Gebühren prüfen; Salary Sacrifice bis zum Concessional Cap (A$32.500 in 2026–27 inkl. Arbeitgeberbeitrag, [ATO](https://www.ato.gov.au/tax-rates-and-codes/key-superannuation-rates-and-thresholds/contributions-caps)) prüfen, wenn der Grenzsteuersatz ≥ 30 % ist und das Geld bis zum Preservation Age gebunden sein darf.
 
 ## 7. Risiken und offene Punkte

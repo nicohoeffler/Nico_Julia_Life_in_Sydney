@@ -26,7 +26,7 @@ BGBL ist faktisch „MSCI World minus ~2 % Australien“. Was an der ASX fehlt, 
 | CFC-Regeln | Brauchen Kontrolle (Beteiligungsschwellen), bei Retail-Anteil nicht erfüllt | 95 % |
 | Transferor-Trust-Regeln | Gelten für Trusts, VWRA ist eine Gesellschaft | 85 % |
 | Laufend | Keine Ausschüttung → nichts jährlich zu versteuern | 75 % |
-| Verkauf | CGT in AUD (inkl. Währungseffekt), **50 % Discount** nach > 12 Monaten | 85 % |
+| Verkauf | CGT in AUD (inkl. Währungseffekt); **ab 1.7.2027 neue Regel** (CPI-Indexierung, mind. 30 %), siehe Methodik 4a | 85 % |
 | Nachteil | 15 % US-Quellensteuer bleibt im Fonds, nicht anrechenbar (Leckage ca. 0,15 % p. a., Annahme) | 80 % |
 
 Fazit: Der Steueraufschub per Thesaurierung **funktioniert in AU wahrscheinlich sogar besser als in DE** (keine Vorabpauschale; Dividenden werden in rabattierten Kursgewinn umgewandelt). Gesamtkonfidenz 75 %. Es gibt aber **keine veröffentlichte ATO-Aussage**. Ein Restrisiko bleibt, dass die ATO das anders sieht. Das ist im Modell als Worst Case gerechnet.

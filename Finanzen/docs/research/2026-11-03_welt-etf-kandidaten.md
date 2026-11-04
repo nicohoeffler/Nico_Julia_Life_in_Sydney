@@ -13,7 +13,7 @@ Kriterium: breiter Welt-ETF ohne Australien-Übergewicht. Abgelehnt sind DHHF, V
 | Domizil / Form | Irland, plc (UCITS) | AU-Trust | AU-Trust | AU-Trusts |
 | Laufende AU-Steuer | keine (thesaurierend, Konfidenz 75 %) | Ausschüttung 1,2 % p. a. zum Grenzsteuersatz | dto. 1,22 % | BGBL wie links; BEMG schüttet laut Betashares nicht aus („no intention to distribute“), steuerliche Zurechnung im PDS prüfen |
 | Quellensteuer | im Fonds, **nicht anrechenbar** | als FITO anrechenbar | dto. | dto. |
-| CGT beim Verkauf | 50 % Discount, Gewinn in AUD inkl. FX | 50 % Discount | 50 % Discount | 50 % Discount |
+| CGT beim Verkauf | bis 30.6.2027: 50 % Discount · ab 1.7.2027: realer Gewinn, mind. 30 % (für alle vier gleich) | ← | ← | ← |
 | Steuerdokumente | keine; jede Kauf-Tranche in AUD selbst dokumentieren | jährliches AMMA-Statement | AMMA | AMMA |
 | Kauf | CMC (LSE, $0 Brokerage) oder IBKR | Betashares Direct (Auto-invest, $0) oder CMC | CMC, Vanguard Personal Investor (nicht verifiziert) | Betashares Direct, ein Auto-invest-Plan |
 | Auto-invest | **nein** (CMC) | **ja** | nicht verifiziert | **ja** |
