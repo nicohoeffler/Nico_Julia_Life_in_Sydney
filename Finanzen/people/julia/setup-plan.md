@@ -51,3 +51,14 @@ Nicos 10.000 passen zu dieser Aufteilung (Konfidenz 70 %). Mehr würde ich erst 
 3. Super-Fonds, Kontostand, Anlageoption?
 4. Größere Ausgaben in den nächsten 2–3 Jahren (Equipment, Reisen, Auto, Wohnung)?
 5. Investiert sie schon etwas (z. B. kleine Monatsrate irgendwo)?
+
+## 7. Steuer-Checkliste (Stand 4.11.2026, ohne neue Verifikation)
+- Steuerjahr 1.7.–30.6.; Erklärung selbst bis 31.10., über Tax Agent später (95 %).
+- BGBL: Ausschüttungen jedes Jahr steuerpflichtig, auch wenn reinvestiert; Werte aus dem AMMA-Statement, Quellensteuer als FITO (90 %).
+- BEMG: keine Ausschüttung, also keine laufende Steuer (75 %).
+- Verkauf: CGT zum Grenzsteuersatz; nach > 12 Monaten nur 50 % des Gewinns steuerpflichtig. Jede Monatsrate ist eine eigene Tranche, Kaufbelege aufheben (90 %).
+- Kapitalverluste nur mit Kapitalgewinnen verrechenbar (90 %).
+- ABN: kein Steuerabzug → 25 % des Gewinns zurücklegen; Business-Ausgaben (Software, Equipment-Abschreibung) absetzbar; GST-Pflicht erst ab A$75.000 Umsatz (95 %).
+- Mehrere Arbeitgeber: Steuerfreibetrag nur bei einem beanspruchen (90 %).
+- Super als Selbstständige: freiwillige Beiträge absetzbar, vorher „Notice of intent“ an den Fonds (90 %).
+- Belege 5 Jahre aufbewahren (95 %). Tax-Agent-Gebühren sind absetzbar (90 %).
