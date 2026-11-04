@@ -38,6 +38,8 @@ Nicos 10.000 passen zu dieser Aufteilung (Konfidenz 70 %). Mehr würde ich erst 
 - Gegenargument: Wenn die echten Ausgaben deutlich höher sind, fängt sie erst mit der Staffelung an und startet die Rate nach dem Ausgaben-Check.
 - Die Staffelung über 10 Monate ist eine Reue-Versicherung und keine Renditeoptimierung. Eine Einmalanlage gewinnt historisch in ca. 2/3 der Fälle (Konfidenz 80 %). Bei 10k und einer Anfängerin ist die Staffelung trotzdem vertretbar.
 
+**Update 4.11.2026 (Entscheidung Nico):** Die 10k werden jetzt auf einmal investiert (8.800 BGBL / 1.200 BEMG), danach laufen $400/Monat am 19. (350 / 50). Die Staffelung entfällt.
+
 ## 5. Umsetzung
 1. ANZ: Hochzins-Sparkonto für Notgroschen + Steuer-Reserve (Konditionen prüfen).
 2. Betashares Direct Konto eröffnen (macht Julia selbst).

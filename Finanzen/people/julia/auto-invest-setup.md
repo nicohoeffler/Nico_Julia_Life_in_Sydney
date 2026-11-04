@@ -1,6 +1,6 @@
-# Julia: Betashares Direct auto-invest setup (as of 4 Nov 2026)
+# Julia: Betashares Direct setup (as of 4 Nov 2026, v2)
 
-Plan: **88 % BGBL / 12 % BEMG**, monthly, funded by an ANZ recurring transfer. Julia does every step herself. Nobody else places orders or opens accounts for her.
+Plan: **$10,000 invested in one go now**, then **$400 every month on the 19th**, always **88 % BGBL / 12 % BEMG**. Julia does every step herself. Nobody else places orders or opens accounts for her.
 
 ## 1. What exactly she buys
 
@@ -13,30 +13,41 @@ Together this closely matches a global all-world index without an Australia over
 
 ## 2. Amounts
 
-| Variant | Monthly total | BGBL (88 %) | BEMG (12 %) |
+| | Total | BGBL | BEMG |
 |---|---|---|---|
-| A: ongoing rate only | $300 | **$264** | **$36** |
-| B: months 1–10 with the $10k staggered in ($1,000 + $300) | $1,300 | $1,144 | $156 |
-| B: from month 11 | $300 | $264 | $36 |
+| One-off purchase (now) | $10,000 | **$8,800** | **$1,200** |
+| Monthly auto-invest (from the 19th) | $400 | **$350** | **$50** |
 
-- **First investment:** there is no fixed minimum beyond fractional investing "from as little as $10" (Betashares Direct FAQ, checked 4 Nov 2026). The first investment is simply the first month's amount.
-- **Open point:** Betashares does not publish a per-ETF minimum for auto-invest on its official pages. A secondary source (Finder) mentions $50. If the app rejects $36 for BEMG, use **BEMG $50 / BGBL $250** (83/17, close enough) or add BEMG quarterly at $108. Check this in the app when setting up.
+- $350 / $50 is 87.5 / 12.5, close enough to 88 / 12. It also keeps BEMG at $50. Betashares publishes no per-ETF minimum for auto-invest, and a secondary source (Finder) mentions $50.
+- **First investment:** no fixed minimum beyond fractional investing "from as little as $10" (Betashares Direct FAQ, checked 4 Nov 2026).
+- **Cash left after the one-off purchase:** about $15,000 at ANZ. That is the safety net (~$10k) plus the tax reserve ($3–5k). Don't invest any more of it.
+- **Why $400 and not $300:** with the $10k invested in one go, the earlier $1,000/month staggering falls away. $400 is well under her estimated monthly surplus. It can be lowered or paused at any time if her real expenses turn out higher.
 
 ## 3. Step by step
 
+### A. Account (once)
 1. **Open the account** in the Betashares Direct app or website: Australian tax resident, 18+, Australian residential address, ID (driver licence or passport). Enter her **Tax File Number** during sign-up. Without a TFN, tax is withheld from distributions at the top rate.
-2. **Note the Cash Wallet details** shown in the app (BSB and account number in her name). The money for every order comes from this wallet.
-3. **ANZ recurring transfer** (ANZ app > Pay/Transfer > set a recurring payment): to the Wallet BSB/account, **$300** (or $1,300 in variant B), monthly, **2 business days before** the auto-invest date. Example: transfer on the 1st, auto-invest on the 3rd. Ideally a day or two after payday.
-4. **Create the auto-invest plan**: add BGBL with $264 and BEMG with $36 (or the variant B amounts), frequency monthly, pick the start date. Betashares invests the full amount, fractions included, so no cash is left over.
-5. **Distributions**: BGBL pays distributions (about 1.2 % a year). By default they go to the Cash Wallet. Set the standing instruction to **reinvest automatically** (allowed under the Betashares Direct PDS of 9 Sep 2026, section 2.5; the exact menu name in the app is not verified). BEMG does not distribute, so nothing to set there.
-6. **First month check**: after the first order date, confirm both ETFs appear in the portfolio and the wallet is close to $0.
-7. **Variant B only**: after 10 months, change the recurring transfer and the auto-invest amounts down to $300 / $264 / $36.
+2. **Note the Cash Wallet details** shown in the app (BSB and account number in her name).
+
+### B. One-off purchase of $10,000
+3. **Move $10,000** from ANZ to the Cash Wallet (Osko/PayID if offered, otherwise a normal transfer, which can take 1–2 business days). Buying "tomorrow" only works once the account is verified and the money shows in the wallet.
+4. **Buy BGBL $8,800 and BEMG $1,200.**
+   - **Not in the first 30 minutes after the 10:00 open.** The ASX opens in stages until about 10:10, and ETF bid/ask spreads are usually widest early. A good window is **10:30–15:30 Sydney time**. Also avoid the closing auction (16:00–16:10).
+   - If the app offers a limit order, set it at or just above the current ask. How Betashares Direct executes one-off and fractional orders is not verified, so check the order screen.
+5. Check that both ETFs show in the portfolio.
+
+### C. Monthly $400 on the 19th
+6. **ANZ recurring transfer:** $400 to the Wallet BSB/account, monthly, on the **17th**.
+7. **Auto-invest plan:** BGBL $350 + BEMG $50, frequency monthly, start date the **19th** (if that is a weekend, check in the app how the date shifts).
+8. **Distributions:** set BGBL distributions to **reinvest automatically** (allowed under the Betashares Direct PDS of 9 Sep 2026, section 2.5; exact menu name not verified). BEMG does not distribute.
+9. **First month check:** after the 19th, confirm both buys went through and the wallet is close to $0.
 
 ## 4. Things to know
 
-- **Market just dropped?** Doesn't change the plan. Monthly buying means she automatically buys more units when prices are low. Nobody can reliably time the bottom.
-- **Tax**: reinvested distributions are still taxable in the year they are paid. Betashares sends an annual tax statement (AMMA). Keep it for the tax return.
-- **Selling**: possible on any ASX trading day in the app, money arrives in the Cash Wallet after settlement (T+2) and can be withdrawn to ANZ. See the Safety Net page.
-- **Pause**: auto-invest can be paused or changed at any time in the app.
+- **Market just dropped?** That doesn't change the plan. Nobody can reliably time the bottom. Honest worst case: if markets fall another 30 %, the $10,000 is temporarily worth about $7,000. If that would make her sell, she should spread the $10k over a few months instead.
+- **Why the 19th?** It's fine, but not because it is a "best day". We tested 12–30 years of data: no day of the month is reliably better, and differences are around 0.1 % (see [kauftag-analyse](../../docs/research/2026-11-04_kauftag-analyse.md)). What matters is that the transfer arrives before the buy date.
+- **Tax:** reinvested distributions are still taxable in the year they are paid. Betashares sends an annual tax statement (AMMA). Keep it for the tax return.
+- **Selling:** possible on any ASX trading day in the app. The money arrives in the Cash Wallet after settlement (T+2) and can be withdrawn to ANZ. See the Safety Net page.
+- **Pause:** auto-invest can be paused or changed at any time in the app.
 
-Sources: [betashares.com.au/direct/auto-invest](https://www.betashares.com.au/direct/auto-invest), [betashares.com.au/direct/faq](https://www.betashares.com.au/direct/faq), Betashares Direct PDS (9 Sep 2026), all checked 3–4 Nov 2026.
+Sources: [betashares.com.au/direct/auto-invest](https://www.betashares.com.au/direct/auto-invest), [betashares.com.au/direct/faq](https://www.betashares.com.au/direct/faq), Betashares Direct PDS (9 Sep 2026), all checked 3–4 Nov 2026. ASX session times are general knowledge and not re-verified.
