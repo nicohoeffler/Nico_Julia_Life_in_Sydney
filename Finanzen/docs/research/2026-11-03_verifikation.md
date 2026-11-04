@@ -81,3 +81,15 @@ Wichtig: **Auf der ASX gibt es (nach dieser Recherche) kein Ein-Produkt-Äquival
 
 ## Nachtrag 4.11.2026: CGT-Reform
 - **Ab 1.7.2027:** 50 %-CGT-Discount für Individuals/Trusts/Partnerships ersetzt durch CPI-Indexierung der Kostenbasis + Mindeststeuer 30 % auf Gewinne; gilt nur für Gewinne nach dem 1.7.2027. Gesetz: Treasury Laws Amendment (Tax Reform No. 1) Act 2026, laut ATO „now law“. [ATO, 29.6.2026](https://www.ato.gov.au/about-ato/new-legislation/in-detail/individuals/tax-reform-boosting-home-ownership-reforming-negative-gearing-and-capital-gains-tax), [Budget](https://budget.gov.au/content/04-tax-reform.htm), [Moore Australia](https://www.moore-australia.com.au/news/federal-budget-series-cgt-discount-reform/) (Marktwert-Reset 1.7.2027, sekundär). Hinweis von Nico (Google-KI-Screenshot) am 4.11.2026; meine Antwort vom selben Morgen („50 % nach 12 Monaten“) war damit unvollständig.
+
+## Nachtrag 4.11.2026: unabhängige Prüfung CGT-Reform (separater Agent, Primärquellen)
+- **Gesetz:** Treasury Laws Amendment (Tax Reform No. 1) Act 2026 (No. 49), Royal Assent **26.6.2026** ([Act](https://www.ato.gov.au/law/view/pdf/acts/20260049.pdf), [ATO CGT reform, 13.10.2026](https://www.ato.gov.au/individuals-and-families/investments-and-assets/capital-gains-tax/capital-gains-tax-reform)). 95 %
+- 50 % Discount nur für CGT-Events **vor 1.7.2027** (s 115-100(aa)); danach CPI-Indexierung (s 110-36(1A)). 95 %
+- **Mindeststeuer 30 % (Div 119): nur für ansässige Individuals**, als Aufstockung: 30 % des Gewinns minus die darauf schon gezahlte Einkommensteuer; gilt auch für Gewinne, die über Trusts zufließen; Ausnahme bei Bezug bestimmter Sozialleistungen im Jahr (s 119-15). Medicare zählt vermutlich nicht mit. 90 %
+- **Übergang:** Bestand am 30.6.2027 gilt als zum Marktwert verkauft und zurückgekauft (s 112-155); der Gewinn bis dahin wird bis zum Verkauf aufgeschoben und behält den 50 % Discount. 90 %
+- Super-Fonds: 1/3-Discount unverändert (80 %, keine explizite Primärquelle).
+- AMIT-/ETF-Ausschüttungen von Kapitalgewinnen: Detailbehandlung **unklar** (50 %); Trustees müssen Gewinne in Anteile vor/nach 1.7.2027 aufteilen (s 115-235).
+- Neubauten: Wahlrecht 50 % Discount vs. Indexierung (s 115-102(5)).
+
+## Nachtrag 4.11.2026: Betashares-Produkte ohne Ausschüttung
+Laut [Betashares-Ausschüttungsschätzung 29.6.2026 (ASX)](https://announcements.asx.com.au/asxpdf/20260630/pdf/0714wzxtwfwkjp.pdf) ohne Ausschüttung: CLDD, CRYP, IIND, RCKT, WRLD, BBAB, BBOZ, BBUS, BEAR, BEMG, GGAB, GGUS, QBTC, QETH, USD, YANK. Breit und ungehebelt davon nur **BEMG** (Schwellenländer, 0,35 %) und **WRLD** (Managed Risk Global, 0,54 %, Risiko-Overlay). Gebühren: [Betashares International ETFs](https://www.betashares.com.au/category/international-etfs/).

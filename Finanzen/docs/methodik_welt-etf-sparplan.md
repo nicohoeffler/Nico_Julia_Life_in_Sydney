@@ -97,7 +97,8 @@ Der Grenzsteuersatz (ATO 2026–27, Residents): 16 % bis A$45.000, 30 % bis A$13
 - *Treasury Laws Amendment (Tax Reform No. 1) Act 2026*; ATO: „now law“ ([ATO, aktualisiert 29.6.2026](https://www.ato.gov.au/about-ato/new-legislation/in-detail/individuals/tax-reform-boosting-home-ownership-reforming-negative-gearing-and-capital-gains-tax), [Budget 2026–27](https://budget.gov.au/content/04-tax-reform.htm)).
 - Für Individuals, Trusts, Partnerships: 50 %-Discount wird durch **CPI-Indexierung der Kostenbasis** und eine **Mindeststeuer von 30 % auf Gewinne** ersetzt.
 - Gilt nur für Gewinne, die **nach dem 1.7.2027** entstehen. Laut [Moore Australia (5/2026)](https://www.moore-australia.com.au/news/federal-budget-series-cgt-discount-reform/) wird die Kostenbasis zum 1.7.2027 auf den Marktwert gesetzt (sekundär, Konfidenz 70 %).
-- Superfonds: auf der ATO-Seite nicht behandelt (offen).
+- **Unabhängig geprüft (4.11.2026):** Royal Assent 26.6.2026; Mindeststeuer 30 % gilt nur für ansässige Individuals und ist eine Aufstockung (30 % des Gewinns minus bereits gezahlte Einkommensteuer darauf), bei 30 %+ Grenzsatz also selten wirksam; Bestand am 30.6.2027 wird zum Marktwert „neu eingebucht“, der Gewinn bis dahin behält den 50 % Discount (s 112-155). Details: research/2026-11-03_verifikation.md.
+- Superfonds: 1/3-Discount laut Sekundärquellen unverändert (80 %).
 - Folgen für den Plan: (1) Der Steuervorteil thesaurierender Fonds (VWRA, BEMG) schrumpft, weil umgewandelte Dividenden nicht mehr zum halben Satz besteuert werden; BGBL liegt im Modell jetzt **vor** VWRA. (2) Auch bei niedrigem Einkommen im Ruhestand gelten mind. 30 % auf reale Gewinne. (3) Super wird relativ attraktiver (abhängig von der noch offenen Super-Behandlung).
 
 ## 5. Kosten- und Steuermodell
