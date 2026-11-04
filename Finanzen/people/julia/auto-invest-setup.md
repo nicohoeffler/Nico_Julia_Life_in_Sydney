@@ -1,6 +1,6 @@
 # Julia: Betashares Direct setup (as of 4 Nov 2026, v3)
 
-Plan: the **$10,000 is staggered as $1,000 a month for 10 months**, plus the ongoing rate (**$300 a month** during the staggering, **$417** afterwards so BEMG meets the $50 minimum), always **88 % BGBL / 12 % BEMG**. The first month is bought tomorrow, then auto-invest runs on the 19th. Julia does every step herself. Nobody else places orders or opens accounts for her.
+Plan: the **$10,000 is staggered as $1,000 a month for 10 months**, plus the ongoing rate (**$300 a month** during the staggering, **$417** afterwards so BEMG meets the $50 minimum), always **88 % BGBL / 12 % BEMG**. The first month is bought tomorrow, then auto-invest runs on the 23rd (set up by Nico and Julia on 4 Nov 2026). Julia does every step herself. Nobody else places orders or opens accounts for her.
 
 ## 1. What exactly she buys
 
@@ -15,9 +15,9 @@ Together this closely matches a global all-world index without an Australia over
 
 | When | Total | BGBL (88 %) | BEMG (12 %) |
 |---|---|---|---|
-| Tomorrow, one-off (month 1) | $1,300 | **$1,144** | **$156** |
-| Auto-invest on the 19th, months 2–10 (Dec 2026 – Aug 2027) | $1,300 | **$1,144** | **$156** |
-| Auto-invest from month 11 (from 19 Sep 2027) | $417 | **$367** | **$50** |
+| 5 Nov 2026, one-off (month 1) | $1,000 | **$880** | **$120** |
+| Auto-invest on the 23rd, 9 times | $1,300 | **$1,144** | **$156** |
+| Auto-invest after the 9th run | $417 | **$367** | **$50** |
 
 - $1,300 = $1,000 (staggered savings) + $300 (ongoing rate). Total staggered: 10 × $1,000 = $10,000.
 - If she only wants to buy the $1,000 tomorrow: **$880 BGBL / $120 BEMG**, and the first $300 goes in with the auto-invest.
@@ -30,20 +30,20 @@ Together this closely matches a global all-world index without an Australia over
 1. **Open the account** in the Betashares Direct app or website: Australian tax resident, 18+, Australian residential address, ID (driver licence or passport). Enter her **Tax File Number** during sign-up. Without a TFN, tax is withheld from distributions at the top rate.
 2. **Note the Cash Wallet details** shown in the app (BSB and account number in her name).
 
-### B. Tomorrow: first month by hand
-3. **Move $1,300** from ANZ to the Cash Wallet (Osko/PayID if offered, otherwise a normal transfer, which can take 1–2 business days). Buying tomorrow only works once the account is verified and the money shows in the wallet.
-4. **Buy BGBL $1,144 and BEMG $156.** Avoid the first 30 minutes after the 10:00 open, when ETF spreads are usually widest. A good window is **10:30–15:30 Sydney time**. How Betashares Direct executes one-off and fractional orders is not verified, so check the order screen.
+### B. 5 Nov 2026: first $1,000 by hand
+3. **Move $1,000** from ANZ to the Cash Wallet (Osko/PayID if offered, otherwise a normal transfer, which can take 1–2 business days). Buying tomorrow only works once the account is verified and the money shows in the wallet.
+4. **Buy BGBL $880 and BEMG $120.** Avoid the first 30 minutes after the 10:00 open, when ETF spreads are usually widest. A good window is **10:30–15:30 Sydney time**. How Betashares Direct executes one-off and fractional orders is not verified, so check the order screen.
 
-### C. From December: auto-invest on the 19th
-5. **ANZ recurring transfer:** $1,300 to the Wallet BSB/account, monthly on the **17th**, first payment 17 Dec 2026.
-6. **Auto-invest plan:** BGBL $1,144 + BEMG $156, monthly, start **19 Dec 2026** (if that is a weekend, check in the app how the date shifts).
+### C. Auto-invest on the 23rd
+5. **ANZ recurring transfer:** $1,300 to the Wallet BSB/account, monthly on the **21st** (2 business days before the 23rd). Amount = the sum of both auto-invest amounts.
+6. **Auto-invest plan:** BGBL $1,144 + BEMG $156, monthly on the **23rd** (already set up; if the 23rd is a weekend, check in the app how the date shifts).
 7. **Distributions:** set BGBL distributions to **reinvest automatically** (allowed under the Betashares Direct PDS of 9 Sep 2026, section 2.5; exact menu name not verified). BEMG does not distribute.
-8. **Calendar reminder for mid-September 2027:** after the 19 Aug 2027 purchase, change the ANZ transfer to $417 and the auto-invest to BGBL $367 / BEMG $50.
+8. **Calendar reminder:** after the 9th auto-invest run (10 × $1,000 = $10,000 staggered in total), change the ANZ transfer to $417 and the auto-invest to BGBL $367 / BEMG $50.
 
 ## 4. Things to know
 
 - **Market just dropped?** That doesn't change the plan. Nobody can reliably time the bottom. Staggering means she keeps buying if prices fall further. Historically, investing a lump sum all at once wins in about 2 out of 3 cases. Staggering is insurance against regret, not a return booster.
-- **Why the 19th?** It's fine, but not because it is a "best day". We tested 12–30 years of data: no day of the month is reliably better, and differences are around 0.1 % (see [kauftag-analyse](../../docs/research/2026-11-04_kauftag-analyse.md)). What matters is that the transfer arrives before the buy date.
+- **Why the 23rd?** It's fine, but not because it is a "best day". We tested 12–30 years of data: no day of the month is reliably better, and differences are around 0.1 % (see [kauftag-analyse](../../docs/research/2026-11-04_kauftag-analyse.md)). What matters is that the transfer arrives before the buy date. The date was moved from the 19th to the 23rd on 4 Nov 2026.
 - **Tax:** reinvested distributions are still taxable in the year they are paid. Betashares sends an annual tax statement (AMMA). Keep it for the tax return.
 - **Selling:** possible on any ASX trading day in the app. The money arrives in the Cash Wallet after settlement (T+2) and can be withdrawn to ANZ. See the Safety Net page.
 - **Pause:** auto-invest can be paused or changed at any time in the app.
