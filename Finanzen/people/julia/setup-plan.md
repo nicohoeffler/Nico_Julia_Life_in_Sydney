@@ -44,6 +44,7 @@ Nicos 10.000 passen zu dieser Aufteilung (Konfidenz 70 %). Mehr würde ich erst 
 3. Auto-invest: monatlich, **88 % BGBL / 12 % BEMG** (oder 100 % BGBL), Betrag 1.300.
 4. ANZ-Dauerauftrag ins Betashares-Wallet, 1–2 Tage vor dem Auto-invest-Termin.
 5. Nach 10 Monaten: Betrag auf die laufende Rate umstellen.
+6. Schritt-für-Schritt-Anleitung für Julia (Englisch): [auto-invest-setup.md](auto-invest-setup.md).
 
 ## 6. Offene Fragen an Julia
 1. Echte Ausgaben laut 3 Monaten Kontoauszug?
