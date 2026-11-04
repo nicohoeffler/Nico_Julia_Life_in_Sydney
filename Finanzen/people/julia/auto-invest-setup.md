@@ -1,6 +1,6 @@
 # Julia: Betashares Direct setup (as of 4 Nov 2026, v3)
 
-Plan: the **$10,000 is staggered as $1,000 a month for 10 months**, plus the ongoing **$300 a month**, always **88 % BGBL / 12 % BEMG**. The first month is bought tomorrow, then auto-invest runs on the 19th. Julia does every step herself. Nobody else places orders or opens accounts for her.
+Plan: the **$10,000 is staggered as $1,000 a month for 10 months**, plus the ongoing rate (**$300 a month** during the staggering, **$417** afterwards so BEMG meets the $50 minimum), always **88 % BGBL / 12 % BEMG**. The first month is bought tomorrow, then auto-invest runs on the 19th. Julia does every step herself. Nobody else places orders or opens accounts for her.
 
 ## 1. What exactly she buys
 
@@ -17,11 +17,11 @@ Together this closely matches a global all-world index without an Australia over
 |---|---|---|---|
 | Tomorrow, one-off (month 1) | $1,300 | **$1,144** | **$156** |
 | Auto-invest on the 19th, months 2–10 (Dec 2026 – Aug 2027) | $1,300 | **$1,144** | **$156** |
-| Auto-invest from month 11 (from 19 Sep 2027) | $300 | **$264** | **$36** |
+| Auto-invest from month 11 (from 19 Sep 2027) | $417 | **$367** | **$50** |
 
 - $1,300 = $1,000 (staggered savings) + $300 (ongoing rate). Total staggered: 10 × $1,000 = $10,000.
 - If she only wants to buy the $1,000 tomorrow: **$880 BGBL / $120 BEMG**, and the first $300 goes in with the auto-invest.
-- **Minimum:** fractional investing "from as little as $10" (Betashares Direct FAQ, checked 4 Nov 2026). Betashares publishes no per-ETF minimum for auto-invest. A secondary source (Finder) mentions $50. That only matters from month 11 ($36 BEMG). If the app rejects it, use **$250 / $50**, or $350 / $50 at $400 a month.
+- **Minimum:** each recurring order must be at least **$50 per ETF** (confirmed by Nico in the app, 4 Nov 2026). From month 11, BEMG is therefore set to $50, and BGBL to $367 so the split stays 88 / 12 ($50 / 0.12 = $417 in total). Months 1–10 are unaffected ($156 BEMG). One-off buys: fractional "from as little as $10" (Betashares Direct FAQ).
 - Cash at ANZ stays ≥ ~$15,000 throughout (safety net ~$10k + tax reserve $3–5k), because the $10k leaves gradually.
 
 ## 3. Step by step
@@ -38,7 +38,7 @@ Together this closely matches a global all-world index without an Australia over
 5. **ANZ recurring transfer:** $1,300 to the Wallet BSB/account, monthly on the **17th**, first payment 17 Dec 2026.
 6. **Auto-invest plan:** BGBL $1,144 + BEMG $156, monthly, start **19 Dec 2026** (if that is a weekend, check in the app how the date shifts).
 7. **Distributions:** set BGBL distributions to **reinvest automatically** (allowed under the Betashares Direct PDS of 9 Sep 2026, section 2.5; exact menu name not verified). BEMG does not distribute.
-8. **Calendar reminder for mid-September 2027:** after the 19 Aug 2027 purchase, change the ANZ transfer to $300 and the auto-invest to $264 / $36.
+8. **Calendar reminder for mid-September 2027:** after the 19 Aug 2027 purchase, change the ANZ transfer to $417 and the auto-invest to BGBL $367 / BEMG $50.
 
 ## 4. Things to know
 
