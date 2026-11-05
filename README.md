@@ -5,3 +5,4 @@ Privates Repo für alles rund um unseren Umzug nach Sydney.
 | Ordner | Inhalt |
 |---|---|
 | [Rent/](Rent/README.md) | Wohnungssuche Bondi / North Bondi: Listings, Unterlagen, Guarantor, Bewerbungen |
+| [Finanzen/](Finanzen/README.md) | Finanzplan / ETF-Sparplan (erster Fall: Julia), Recherche mit Quellen |

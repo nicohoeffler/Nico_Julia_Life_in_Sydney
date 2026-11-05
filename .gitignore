@@ -7,3 +7,7 @@ Rent/dokumente/*
 *.png
 *.heic
 .DS_Store
+
+# Finanzen: Kontoauszüge, Broker-Exporte, Super-Statements bleiben lokal
+Finanzen/data/*
+!Finanzen/data/.gitkeep

@@ -1,0 +1,212 @@
+<title>Julia's Safety Net</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: one calm column like a letter, with three "pots" and one playable wave chart. Bondi morning palette. */
+:root{
+  --bg:#f3f6f6; --surface:#ffffff; --ink:#1d3340; --muted:#5d7380; --line:#d6e2e4;
+  --sea:#2f8f8b; --sea-soft:#dcefed; --sun:#e98a5d; --sun-soft:#fbe6da; --sand:#efe6d6;
+  --good:#2f8f8b; --bad:#c4553a;
+  --display:"Young Serif", Georgia, "Times New Roman", serif;
+  --body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1a20; --surface:#16252d; --ink:#e7eef0; --muted:#9db1ba; --line:#28404b;
+  --sea:#5cc2bc; --sea-soft:#183a3a; --sun:#f0a07a; --sun-soft:#3a2a22; --sand:#2a2a24;
+  --good:#5cc2bc; --bad:#ee8a70; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#0f1a20; --surface:#16252d; --ink:#e7eef0; --muted:#9db1ba; --line:#28404b;
+  --sea:#5cc2bc; --sea-soft:#183a3a; --sun:#f0a07a; --sun-soft:#3a2a22; --sand:#2a2a24;
+  --good:#5cc2bc; --bad:#ee8a70; color-scheme:dark }
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px 64px}
+main{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:56px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.15;text-wrap:balance;margin:0}
+h1{font-size:clamp(2.2rem,7vw,3.4rem)}
+h2{font-size:clamp(1.6rem,4.5vw,2.1rem)}
+h3{font-size:1.2rem}
+p{margin:0;max-width:62ch}
+.eyebrow{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sea);font-weight:700}
+section{display:flex;flex-direction:column;gap:18px}
+.lead{font-size:1.15rem;color:var(--muted)}
+.hero{gap:20px;padding-top:8px}
+.yes{display:inline-flex;align-items:center;gap:10px;align-self:flex-start;background:var(--sea-soft);color:var(--sea);
+  border-radius:999px;padding:6px 16px;font-weight:600}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--sea)}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.steps li{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.steps b{font-family:var(--display);font-weight:400;font-size:1.6rem;color:var(--sun)}
+.steps span{font-size:.95rem}
+.note{font-size:.92rem;color:var(--muted)}
+.chartcard{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:16px}
+.chartwrap{overflow-x:auto}
+svg{display:block;width:100%;height:auto;min-width:320px}
+.months{display:flex;flex-wrap:wrap;gap:8px}
+.months button{font:inherit;font-size:.92rem;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:999px;padding:6px 14px;cursor:pointer}
+.months button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.months button:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+.result{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.result div{display:flex;flex-direction:column;gap:2px;min-width:0}
+.result small{color:var(--muted);font-size:.8rem;letter-spacing:.06em;text-transform:uppercase}
+.result strong{font-family:var(--display);font-weight:400;font-size:1.5rem;font-variant-numeric:tabular-nums}
+.verdict{border-radius:12px;padding:12px 16px;font-weight:500}
+.verdict.bad{background:var(--sun-soft);color:var(--bad)}
+.verdict.good{background:var(--sea-soft);color:var(--good)}
+.pots{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
+.pot{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.jar{height:84px;border-radius:12px 12px 20px 20px;border:2px solid var(--line);position:relative;overflow:hidden;background:var(--bg)}
+.jar i{position:absolute;left:0;right:0;bottom:0;display:block}
+.pot .amt{font-family:var(--display);font-size:1.5rem;font-variant-numeric:tabular-nums}
+.pot p{font-size:.95rem;color:var(--muted)}
+.pot .tag{font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.rules{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.rules li{display:flex;gap:14px;align-items:baseline;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 18px}
+.rules b{font-family:var(--display);font-weight:400;color:var(--sun);font-size:1.4rem;flex:none}
+.honest{background:var(--sand);border-radius:18px;padding:20px}
+footer{font-size:.85rem;color:var(--muted);border-top:1px solid var(--line);padding-top:16px}
+@media (max-width:480px){.result{grid-template-columns:1fr 1fr}.result div:last-child{grid-column:1/-1}}
+@media (prefers-reduced-motion:no-preference){.jar i{transition:height .6s ease}}
+</style>
+
+<main>
+  <section class="hero">
+    <span class="eyebrow">For Julia · how your money stays yours</span>
+    <h1>Yes, you can always sell. Here's why you usually shouldn't.</h1>
+    <span class="yes"><span class="dot"></span>Your ETF money is never locked away</span>
+    <p class="lead">Think of it like this. Your investments are a garden, not a safe. You can pick the fruit any day you like. But if you pull out the plants in winter, they never get to grow back.</p>
+  </section>
+
+  <section>
+    <span class="eyebrow">Can I get my money out?</span>
+    <h2>Selling takes a few taps and a few days</h2>
+    <ol class="steps">
+      <li><b>1</b><span>Open the Betashares Direct app on any ASX trading day and tap <strong>Sell</strong>.</span></li>
+      <li><b>2</b><span>The sale settles in <strong>2 business days</strong>.</span></li>
+      <li><b>3</b><span>The cash lands in your Betashares wallet.</span></li>
+      <li><b>4</b><span>Transfer it to your ANZ account. It usually arrives within a few days.</span></li>
+    </ol>
+    <p class="note">BGBL and BEMG trade on the ASX every trading day, so there is always a buyer. One thing to know: when you sell for more than you paid, the gain is taxed. Until 30 June 2027, holding for over 12 months halves the taxable gain. From 1 July 2027, new rules tax only the growth above inflation, at a minimum of 30%. Either way, selling less often means paying less tax.</p>
+  </section>
+
+  <section>
+    <span class="eyebrow">So why not sell when prices fall?</span>
+    <h2>Because falling prices are when monthly saving works hardest</h2>
+    <p>Every month you put in the same <strong>$1,000</strong>. When the price is low, that $1,000 buys you <em>more</em> pieces of the world. Tap a month below to see what happens if you sell then.</p>
+    <div class="chartcard">
+      <div class="chartwrap"><svg id="chart" viewBox="0 0 640 300" role="img" aria-label="Example price wave over six months with units bought each month"></svg></div>
+      <div class="months" id="months" role="group" aria-label="Pick the month you sell"></div>
+      <div class="result">
+        <div><small>You put in</small><strong id="paid">$0</strong></div>
+        <div><small>You'd get back</small><strong id="worth">$0</strong></div>
+        <div><small>Difference</small><strong id="diff">$0</strong></div>
+      </div>
+      <div class="verdict" id="verdict"></div>
+      <p class="note">Example numbers to show the idea, not a forecast. The price starts at $10, drops to $5 and comes back to $10.</p>
+    </div>
+  </section>
+
+  <section class="honest">
+    <span class="eyebrow">The honest part</span>
+    <h3>Markets do fall, sometimes a lot</h3>
+    <p>Global shares have fallen by a third or more several times in history, and getting back up has sometimes taken years. It will happen while you own your ETFs. That's normal. A loss only becomes real if you sell during the dip. That's why the next part matters.</p>
+  </section>
+
+  <section>
+    <span class="eyebrow">Saving with a safety net</span>
+    <h2>Three pots, so you never have to sell in a dip</h2>
+    <p>Money you might need soon never goes into the investment pot. Then a dip can't force your hand.</p>
+    <div class="pots">
+      <div class="pot">
+        <span class="tag" style="color:var(--sun)">Safety net</span>
+        <div class="jar"><i style="height:70%;background:var(--sun-soft);border-top:3px solid var(--sun)"></i></div>
+        <span class="amt">≈ $10,000</span>
+        <p>About 6 months of living costs, in an ANZ savings account. This is the money you grab for an emergency. Refill it afterwards.</p>
+      </div>
+      <div class="pot">
+        <span class="tag" style="color:var(--muted)">Tax pot</span>
+        <div class="jar"><i style="height:35%;background:var(--sand);border-top:3px solid var(--muted)"></i></div>
+        <span class="amt">≈ $3,000–5,000</span>
+        <p>Set aside for tax on your business income, so tax time is never a surprise.</p>
+      </div>
+      <div class="pot">
+        <span class="tag" style="color:var(--sea)">Growth pot</span>
+        <div class="jar"><i style="height:55%;background:var(--sea-soft);border-top:3px solid var(--sea)"></i></div>
+        <span class="amt">$10,000 + monthly</span>
+        <p>Invested $1,000 a month over 10 months, plus a small monthly amount. Money for 5+ years from now.</p>
+      </div>
+    </div>
+    <p class="note">Pot sizes are from our first conversation on 3 November 2026. We'll adjust them once we've looked at your real monthly spending.</p>
+  </section>
+
+  <section>
+    <span class="eyebrow">Your three rules</span>
+    <ul class="rules">
+      <li><b>1</b><span>Only invest money you won't need for at least <strong>5 years</strong>.</span></li>
+      <li><b>2</b><span>When prices drop, <strong>do nothing</strong>. Your monthly auto-invest keeps buying cheaper.</span></li>
+      <li><b>3</b><span>Need cash? Take it from the <strong>safety net</strong> first. The growth pot is for future you.</span></li>
+    </ul>
+  </section>
+
+  <footer>Made by Claude for Nico &amp; Julia, 3 November 2026. This is a way to think about saving, not financial advice. For tax questions, ask a registered tax agent.</footer>
+</main>
+
+<script>
+(function(){
+  const prices=[10,8,5,6,8,10];
+  const monthly=1000;
+  const svg=document.getElementById('chart');
+  const NS='http://www.w3.org/2000/svg';
+  const W=640,H=300,L=56,R=24,T=24,B=48;
+  const x=i=>L+(W-L-R)*(i+0.5)/prices.length;
+  const yMax=12, y=v=>T+(H-T-B)*(1-v/yMax);
+  const units=prices.map(p=>monthly/p);
+  const uMax=220, barH=u=>(H-T-B)*0.45*u/uMax;
+  let sel=prices.length-1;
+  function el(n,a,t){const e=document.createElementNS(NS,n);for(const k in a)e.setAttribute(k,a[k]);if(t!=null)e.textContent=t;return e}
+  function draw(){
+    svg.innerHTML='';
+    [0,5,10].forEach(v=>{
+      svg.appendChild(el('line',{x1:L,x2:W-R,y1:y(v),y2:y(v),stroke:'var(--line)','stroke-width':1}));
+      svg.appendChild(el('text',{x:L-10,y:y(v)+4,'text-anchor':'end','font-size':12,fill:'var(--muted)','font-family':'Figtree, sans-serif'},'$'+v));
+    });
+    prices.forEach((p,i)=>{
+      const h=barH(units[i]), bw=44;
+      svg.appendChild(el('rect',{x:x(i)-bw/2,y:H-B-h,width:bw,height:h,rx:8,fill:i<=sel?'var(--sea-soft)':'var(--bg)',stroke:i<=sel?'var(--sea)':'var(--line)','stroke-width':1.5}));
+      svg.appendChild(el('text',{x:x(i),y:H-B-h-6,'text-anchor':'middle','font-size':12,fill:'var(--sea)','font-family':'Figtree, sans-serif','font-weight':600},Math.round(units[i])+' units'));
+      svg.appendChild(el('text',{x:x(i),y:H-B+20,'text-anchor':'middle','font-size':12,fill:'var(--muted)','font-family':'Figtree, sans-serif'},'Month '+(i+1)));
+    });
+    let d='';prices.forEach((p,i)=>{d+=(i?'L':'M')+x(i)+' '+y(p)});
+    svg.appendChild(el('path',{d,fill:'none',stroke:'var(--sun)','stroke-width':3,'stroke-linejoin':'round','stroke-linecap':'round'}));
+    prices.forEach((p,i)=>{
+      svg.appendChild(el('circle',{cx:x(i),cy:y(p),r:i===sel?8:5,fill:i===sel?'var(--sun)':'var(--surface)',stroke:'var(--sun)','stroke-width':2.5}));
+      svg.appendChild(el('text',{x:x(i),y:y(p)-14,'text-anchor':'middle','font-size':13,fill:'var(--ink)','font-family':'Figtree, sans-serif','font-weight':600},'$'+p));
+    });
+    svg.appendChild(el('text',{x:L,y:14,'font-size':12,fill:'var(--muted)','font-family':'Figtree, sans-serif'},'Line: price per unit · Bars: units your $1,000 buys'));
+  }
+  const fmt=n=>(n<0?'−':'')+'$'+Math.abs(Math.round(n)).toLocaleString('en-AU');
+  function update(){
+    const paid=monthly*(sel+1);
+    const u=units.slice(0,sel+1).reduce((a,b)=>a+b,0);
+    const worth=u*prices[sel];
+    const diff=worth-paid;
+    document.getElementById('paid').textContent=fmt(paid);
+    document.getElementById('worth').textContent=fmt(worth);
+    const dEl=document.getElementById('diff');
+    dEl.textContent=(diff>=0?'+':'')+fmt(diff)+' ('+(diff>=0?'+':'−')+Math.abs(Math.round(diff/paid*100))+'%)';
+    dEl.style.color=diff>=0?'var(--good)':'var(--bad)';
+    const v=document.getElementById('verdict');
+    if(diff<0){v.className='verdict bad';v.textContent='Selling in month '+(sel+1)+' turns a temporary dip into a real loss. If you wait, the cheap units you bought are the ones that grow the most.';}
+    else if(sel===prices.length-1){v.className='verdict good';v.textContent='The price is back to where it started, yet you are up. Those cheap units from the dip did that. That is dollar-cost averaging.';}
+    else if(Math.abs(diff)<1){v.className='verdict good';v.textContent='Month 1: nothing has happened yet, so you get back what you put in.';}
+    else{v.className='verdict good';v.textContent='Already ahead, even though the price is still below where it started. The cheap months are working for you.';}
+    document.querySelectorAll('#months button').forEach((b,i)=>b.setAttribute('aria-pressed',i===sel));
+    draw();
+  }
+  const box=document.getElementById('months');
+  prices.forEach((p,i)=>{const b=document.createElement('button');b.type='button';b.id='m'+(i+1);b.textContent='Sell in month '+(i+1);b.addEventListener('click',()=>{sel=i;update()});box.appendChild(b)});
+  update();
+})();
+</script>
