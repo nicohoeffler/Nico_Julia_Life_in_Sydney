@@ -1,6 +1,6 @@
 # Julia: Betashares Direct setup (as of 4 Nov 2026, v3)
 
-Plan: the **$10,000 is staggered as $1,000 a month for 10 months**, plus the ongoing rate (**$300 a month** during the staggering, **$417** afterwards so BEMG meets the $50 minimum), always **88 % BGBL / 12 % BEMG**. The first month is bought tomorrow, then auto-invest runs on the 23rd (set up by Nico and Julia on 4 Nov 2026). Julia does every step herself. Nobody else places orders or opens accounts for her.
+Plan: the **$10,000 is staggered as $1,000 a month for 10 months**, plus the ongoing rate (**$300 a month** during the staggering, **$417** afterwards so BEMG meets the $50 minimum), always **88 % BGBL / 12 % BEMG**. The first month is bought tomorrow, then auto-invest runs on the 17th (moved from the 23rd on 5 Nov 2026). Julia does every step herself. Nobody else places orders or opens accounts for her.
 
 ## 1. What exactly she buys
 
@@ -35,15 +35,15 @@ Together this closely matches a global all-world index without an Australia over
 4. **Buy BGBL $880 and BEMG $120.** Avoid the first 30 minutes after the 10:00 open, when ETF spreads are usually widest. A good window is **10:30–15:30 Sydney time**. How Betashares Direct executes one-off and fractional orders is not verified, so check the order screen.
 
 ### C. Auto-invest on the 23rd
-5. **ANZ recurring transfer:** $1,300 to the Wallet BSB/account, monthly on the **21st** (2 business days before the 23rd). Amount = the sum of both auto-invest amounts.
-6. **Auto-invest plan:** BGBL $1,144 + BEMG $156, monthly on the **23rd** (already set up; if the 23rd is a weekend, check in the app how the date shifts).
+5. **ANZ recurring transfer:** $1,300 to the Wallet BSB/account, monthly on the **14th** (about 3 days before the 17th). Amount = the sum of both auto-invest amounts. **Important:** if the wallet is short on the order date, *none* of the recurring orders are placed and that month is skipped (PDS 9 Sep 2026, s. 3.1).
+6. **Auto-invest plan:** BGBL $1,144 + BEMG $156, monthly on the **17th**. Orders are placed as market orders on that date; ETF market orders are executed at or after **10:15am**, after the opening auction. The time of day cannot be chosen. If the 17th is not a trading day, the order goes in on the next trading day (PDS 9 Sep 2026, s. 3.1).
 7. **Distributions:** set BGBL distributions to **reinvest automatically** (allowed under the Betashares Direct PDS of 9 Sep 2026, section 2.5; exact menu name not verified). BEMG does not distribute.
 8. **Calendar reminder:** after the 9th auto-invest run (10 × $1,000 = $10,000 staggered in total), change the ANZ transfer to $417 and the auto-invest to BGBL $367 / BEMG $50.
 
 ## 4. Things to know
 
 - **Market just dropped?** That doesn't change the plan. Nobody can reliably time the bottom. Staggering means she keeps buying if prices fall further. Historically, investing a lump sum all at once wins in about 2 out of 3 cases. Staggering is insurance against regret, not a return booster.
-- **Why the 23rd?** It's fine, but not because it is a "best day". We tested 12–30 years of data: no day of the month is reliably better, and differences are around 0.1 % (see [kauftag-analyse](../../docs/research/2026-11-04_kauftag-analyse.md)). What matters is that the transfer arrives before the buy date. The date was moved from the 19th to the 23rd on 4 Nov 2026.
+- **Why the 17th?** It's fine, but not because it is a "best day". We tested 12–30 years of data: no day of the month is reliably better, and differences are around 0.1 % (see [kauftag-analyse](../../docs/research/2026-11-04_kauftag-analyse.md)). What matters is that the transfer arrives before the buy date. The date was moved from the 19th to the 23rd (4 Nov) and then to the 17th (5 Nov 2026).
 - **Tax:** reinvested distributions are still taxable in the year they are paid. Betashares sends an annual tax statement (AMMA). Keep it for the tax return.
 - **Selling:** possible on any ASX trading day in the app. The money arrives in the Cash Wallet after settlement (T+2) and can be withdrawn to ANZ. See the Safety Net page.
 - **Pause:** auto-invest can be paused or changed at any time in the app.

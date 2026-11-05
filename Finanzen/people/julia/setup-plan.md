@@ -38,7 +38,7 @@ Nicos 10.000 passen zu dieser Aufteilung (Konfidenz 70 %). Mehr würde ich erst 
 - Gegenargument: Wenn die echten Ausgaben deutlich höher sind, fängt sie erst mit der Staffelung an und startet die Rate nach dem Ausgaben-Check.
 - Die Staffelung über 10 Monate ist eine Reue-Versicherung und keine Renditeoptimierung. Eine Einmalanlage gewinnt historisch in ca. 2/3 der Fälle (Konfidenz 80 %). Bei 10k und einer Anfängerin ist die Staffelung trotzdem vertretbar.
 
-**Update 4.11.2026 (Entscheidung Nico):** Auto-invests eingerichtet, Termin der **23.**: $1.300 (1.144 / 156) × 9, danach $417 (367 / 50; Mindestbetrag $50 pro ETF). 5.11.: $1.000 von Hand (880 / 120). ANZ-Dauerauftrag am 21.
+**Update 4.11.2026 (Entscheidung Nico):** Auto-invests eingerichtet, Termin der **17.** (5.11. umgestellt): $1.300 (1.144 / 156) × 9, danach $417 (367 / 50; Mindestbetrag $50 pro ETF). 5.11.: $1.000 von Hand (880 / 120). ANZ-Dauerauftrag am 14.
 
 ## 5. Umsetzung
 1. ANZ: Hochzins-Sparkonto für Notgroschen + Steuer-Reserve (Konditionen prüfen).
