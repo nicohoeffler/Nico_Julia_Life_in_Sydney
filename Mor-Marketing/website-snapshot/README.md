@@ -13,7 +13,7 @@ bash scrape.sh
 
 Das Skript legt auf dem Desktop einen Ordner `mor-marketing.com-<Datum>` an, mit `pages/` (HTML) und `media/` (Bilder und Videos). Weil das Repo privat ist, klappt der `curl`-Download des Skripts nur mit Login. Am einfachsten öffnest du `scrape.sh` auf GitHub, kopierst den Inhalt und speicherst ihn auf dem Desktop als `scrape.sh`.
 
-Die Videos sind wahrscheinlich ein paar hundert MB groß. Lade den Ordner nicht ins Repo hoch, er gehört in die Cloud (iCloud oder Google Drive). Ins Repo kommen später nur die optimierten Dateien des Nachbaus.
+Die Kopie ist etwa 100 bis 150 MB groß. Die größte Datei hat etwa 21 MB und liegt damit deutlich unter dem GitHub-Limit von 100 MB pro Datei. Deshalb liegt die Kopie mit im Repo (siehe unten).
 
 ## Archiv vom 7.11.2026
 
