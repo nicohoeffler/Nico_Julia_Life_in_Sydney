@@ -21,7 +21,7 @@ Außerdem bitte ich um Folgendes:
 3. Den Auth-Code bzw. die Freigabe für den Umzug meiner Domain mor-marketing.com zu einem anderen Anbieter. Bitte löschen Sie die Domain nicht ohne Rücksprache.
 4. Den Quellcode der Website (z. B. Zugang zum Git-Repository oder ein ZIP des Projekts), damit ich die Seite selbst weiter betreiben kann.
 
-Bis zum Vertragsende bitte ich außerdem, im Rahmen der vereinbarten Wartung folgenden Fehler zu beheben: Der Canonical-Tag und die og:url der Website verweisen auf https://mormarketing.com (ohne Bindestrich). Diese Domain gehört nicht mir und ist eine geparkte Verkaufsseite. Richtig wäre https://mor-marketing.com. Zusätzlich verwenden alle Unterseiten denselben Seitentitel und dieselbe Meta-Description; eigene Titel und Beschreibungen pro Seite wären gut.
+Außerdem bitte ich Sie, im Rahmen der vereinbarten Wartung zeitnah folgenden Fehler zu beheben: Der Canonical-Tag und die og:url der Website verweisen auf https://mormarketing.com (ohne Bindestrich). Diese Domain gehört nicht mir und ist eine geparkte Verkaufsseite. Richtig wäre https://mor-marketing.com.
 
 Vielen Dank für die Zusammenarbeit.
 
@@ -48,7 +48,7 @@ I also ask for:
 3. The auth code / release to transfer my domain mor-marketing.com to another provider. Please do not delete the domain without checking with me first.
 4. The website's source code (e.g. access to the Git repository or a ZIP of the project), so I can keep running the site myself.
 
-Until the contract ends, I also ask you to fix the following as part of the agreed maintenance: the website's canonical tag and og:url point to https://mormarketing.com (without hyphen). That domain is not mine and is a parked for-sale page. Correct is https://mor-marketing.com. In addition, all subpages use the same page title and meta description; individual titles and descriptions per page would be good.
+I also ask you to fix the following promptly as part of the agreed maintenance: the website's canonical tag and og:url point to https://mormarketing.com (without hyphen). That domain is not mine and is a parked for-sale page. Correct is https://mor-marketing.com.
 
 Kind regards,
 Julia Josephine Mor
