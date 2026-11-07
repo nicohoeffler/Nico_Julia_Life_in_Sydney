@@ -14,21 +14,14 @@ for p in $PAGES; do
   echo "Seite: $p"
   curl -sSL "$BASE$p" -o "$OUT/pages/$name.html"
 done
-# Alle Medien- und Asset-Pfade aus dem HTML ziehen (Bilder, Videos, Logos, CSS, JS, Fonts)
-grep -hoE '(src|href|poster|srcSet|srcset)="[^"]+"' "$OUT"/pages/*.html \
-  | sed -E 's/^[a-zA-Z]+="//; s/"$//' | tr ',' '\n' | awk '{print $1}' \
-  | grep -E '\.(jpe?g|png|webp|svg|gif|mp4|mov|webm|ico|css|js|woff2?)(\?|$)' \
-  | sed -E "s#^/#$BASE/#" | grep "^$BASE" | sort -u > "$OUT/asset-urls.txt" || true
-# Original-Dateien hinter /_next/image?url=... ebenfalls holen
-grep -oE '_next/image\?url=[^&"]+' "$OUT"/pages/*.html | sed -E 's#.*url=##' \
-  | python3 -c 'import sys,urllib.parse;[print(urllib.parse.unquote(l.strip())) for l in sys.stdin]' \
-  | sed -E "s#^/#$BASE/#" | sort -u >> "$OUT/asset-urls.txt"
-sort -u -o "$OUT/asset-urls.txt" "$OUT/asset-urls.txt"
+# Alle Medien-Pfade aus dem HTML ziehen (auch mit Leerzeichen/& im Namen)
+grep -ohE '/[^"\\<>]*\.(jpe?g|png|webp|gif|svg|ico|mp4|mov|webm)' "$OUT"/pages/*.html \
+  | sed 's/&amp;/\&/g' | grep -v '_next' | sed -E "s#^/#$BASE/#" | sort -u > "$OUT/asset-urls.txt"
 while read -r u; do
-  [[ "$u" == *"_next/image"* ]] && continue
   path=$(echo "${u#$BASE/}" | sed 's/?.*//')
   mkdir -p "$OUT/media/$(dirname "$path")"
   echo "Datei: $path"
-  curl -sSL "${u// /%20}" -o "$OUT/media/$path" || echo "  FEHLER: $u"
+  enc="${u// /%20}"; enc="${enc//&/%26}"
+  curl -sSL "$enc" -o "$OUT/media/$path" || echo "  FEHLER: $u"
 done < "$OUT/asset-urls.txt"
 echo; echo "Fertig: $OUT  ($(du -sh "$OUT" | cut -f1))"
