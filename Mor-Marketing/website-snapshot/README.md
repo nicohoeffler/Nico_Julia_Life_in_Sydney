@@ -17,4 +17,4 @@ Die Kopie ist etwa 100 bis 150 MB groß. Die größte Datei hat etwa 21 MB und l
 
 ## Archiv vom 7.11.2026
 
-[archive-2026-11-07/](archive-2026-11-07/) enthält das HTML aller 16 Seiten (`pages/`) und 30 Bilder und Videos (`media/`), zusammen etwa 104 MB. Noch nicht enthalten sind „MIX DELI.jpg/.mp4“, „PIRLOS&MIXDELI.mov“, die drei „RIADA CONCEPT“-Videos, „Updated image for Mix Deli slide.jpg“ und „site.webm“. Diese Dateien lädt `scrape-rest.sh` nach. Die kompilierten JS- und CSS-Dateien von HWM (`_next/`) sind bewusst nicht im Archiv.
+[archive-2026-11-07/](archive-2026-11-07/) ist vollständig. Es enthält das HTML aller 16 Seiten (`pages/`) und alle 37 Bilder und Videos (`media/`), zusammen etwa 260 MB. Die größte Datei ist „RIADA CONCEPT(2).mp4“ mit 65 MB. Die Seite verweist zusätzlich auf eine Datei `site.webm`, die es auf dem Server aber gar nicht gibt (sie liefert eine Fehlerseite). Diesen toten Link lassen wir beim Nachbau weg. Die kompilierten JS- und CSS-Dateien von HWM (`_next/`) sind bewusst nicht im Archiv.
